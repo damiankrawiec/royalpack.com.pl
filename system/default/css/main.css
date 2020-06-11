@@ -1,3 +1,10 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+video {
+  width: 100%;
+}
 .im-active img {
   background-color: #333;
 }
@@ -7,6 +14,9 @@
 .im-logo {
   text-align: center;
   padding: 5px;
+}
+.im-movie .object {
+  padding: 0;
 }
 .im-footer {
   background-color: #777;
@@ -31,9 +41,6 @@
 }
 .object .carousel i {
   font-size: 40px;
-}
-video {
-  width: 100%;
 }
 #cookie {
   position: fixed;

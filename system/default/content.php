@@ -27,20 +27,20 @@ $label = $object->getAllLabel();
 
     echo '</div>';
 
-    //Player with movie
-    if($this->checkSection($this->currentSection, 'strona-glowna', true)) {
+    echo '<div class="im-movie">';
 
-        $object->displayStatic($sectionData['id']);
+        //Player with movie
+        echo '<div class="container-fluid">';
 
-    }
+            $object->display($sectionData['id'], $label['movie']);
+
+        echo '</div>';
+
+    echo '</div>';
 
     echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
 
-        if($this->checkSection($this->currentSection, 'strona-glowna', false)) {
-
-            $object->displayStatic($sectionData['id']);
-
-        }
+        $object->displayStatic($sectionData['id']);
 
     echo '</div>';
 
