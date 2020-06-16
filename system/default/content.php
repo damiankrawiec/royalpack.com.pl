@@ -32,6 +32,8 @@ $label = $object->getAllLabel();
         //Player with movie
         echo '<div class="container-fluid">';
 
+            $object->display($sectionData['id'], $label['movie-text']);
+
             $object->display($sectionData['id'], $label['movie']);
 
         echo '</div>';
@@ -39,6 +41,10 @@ $label = $object->getAllLabel();
     echo '</div>';
 
     echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
+
+        $object->display($sectionData['id'], $label['box']);
+
+        $object->display($sectionData['id'], $label['content']);
 
         $object->displayStatic($sectionData['id']);
 
@@ -49,10 +55,14 @@ $label = $object->getAllLabel();
 <div class="im-footer">
     <div class="container-fluid">
 
+        <?php $object->display($sectionData['id'], $label['company-image']); ?>
+
+        <?php $object->display($sectionData['id'], $label['footer']); ?>
+
     </div>
 </div>
 
 <?php
 
-//if(!isset($session['cookie']))
-    //$object->display($sectionData['id'], $label['cookie']);
+if(!isset($session['cookie']))
+    $object->display($sectionData['id'], $label['cookie']);

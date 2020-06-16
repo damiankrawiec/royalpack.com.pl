@@ -9,11 +9,11 @@ video {
   background-color: #333;
 }
 .im-top {
-  padding: 10px 0 10px;
+  padding: 30px 0 30px;
+  border-bottom: 6px solid #e0c469;
 }
-.im-logo {
-  text-align: center;
-  padding: 5px;
+.logo img {
+  margin-top: 19px;
 }
 .im-movie .object {
   padding: 0;
@@ -21,6 +21,14 @@ video {
 .im-footer {
   background-color: #777;
   min-height: 300px;
+  color: #fff;
+  text-align: center;
+}
+.im-footer section {
+  padding: 10px;
+}
+.im-footer section p {
+  font-size: 18px;
 }
 .im-language ul {
   float: right;
@@ -38,9 +46,86 @@ video {
 }
 .object img {
   width: 100%;
+  z-index: 1;
 }
 .object .carousel i {
   font-size: 40px;
+}
+.navbar {
+  padding: 0;
+}
+.navbar ul li {
+  padding: 11px 7px 0;
+  text-align: center;
+  margin: 0 2px 0;
+  border: 1px solid #fff;
+}
+.navbar ul li a {
+  color: #333;
+}
+.navbar ul li a p {
+  color: #aaa;
+  font-size: 12px;
+}
+.navbar ul li.active {
+  border-color: #e0c469;
+}
+.navbar ul li.active a {
+  color: #e0c469;
+}
+.navbar ul li:hover {
+  border-color: #e0c469;
+}
+.movie-text {
+  z-index: 1;
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  opacity: 0.3;
+  margin-top: 10%;
+}
+.movie-text span {
+  border: 3px solid #fff;
+  padding: 40px;
+}
+.box {
+  margin: 50px 0 50px;
+}
+.box .object {
+  padding: 10px;
+  border: 25px solid #fff;
+}
+.box .object > div {
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.box .object .icon {
+  font-size: 40px;
+  color: #ddd;
+}
+.box .object .title {
+  font-weight: bold;
+  font-size: 17px;
+  padding: 8px 0 8px;
+}
+.box .object .text {
+  color: #aaa;
+  line-height: 26px;
+}
+.box .object .link {
+  background-color: #ac0413;
+  color: #fff;
+}
+.box .object .icon,
+.box .object .link {
+  margin: 20px 0 20px;
+}
+.company-image .carousel-caption {
+  display: none !important;
 }
 #cookie {
   position: fixed;
