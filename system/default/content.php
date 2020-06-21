@@ -7,6 +7,8 @@ $object = new ObjectContent($this->systemName(), $db, $this->currentLanguage, $t
 
 $sectionData = $this->getSection($this->currentSection);
 
+$sectionDataAll = $this->getSection();
+
 $label = $object->getAllLabel();
 
 ?>
@@ -25,7 +27,24 @@ $label = $object->getAllLabel();
 
         echo '</div>';
 
-    echo '</div>';
+        echo '<div class="submenu-data">';
+
+            echo '<div class="container-fluid">';
+
+                foreach ($sectionDataAll as $sectionDataOne) {
+
+                    if($sectionDataOne['parent'] > 0)
+                        continue;
+
+                    $object->display($sectionDataOne['id'], $label['submenu'], 'parent,submenu');
+
+                }
+
+            echo '</div>';
+
+        echo '</div>';
+
+echo '</div>';
 
     echo '<div class="im-movie">';
 
