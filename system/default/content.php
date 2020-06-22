@@ -7,8 +7,6 @@ $object = new ObjectContent($this->systemName(), $db, $this->currentLanguage, $t
 
 $sectionData = $this->getSection($this->currentSection);
 
-$sectionDataAll = $this->getSection();
-
 $label = $object->getAllLabel();
 
 ?>
@@ -27,24 +25,28 @@ $label = $object->getAllLabel();
 
         echo '</div>';
 
-        echo '<div class="submenu-data">';
+        //Generate submenu for...
+        $submenuArray = array('o-nas', 'oferta', 'technologia');
 
-            echo '<div class="container-fluid">';
+        echo '<div class="submenu-data im-hide">';
 
-                foreach ($sectionDataAll as $sectionDataOne) {
+        foreach ($submenuArray as $sa) {
 
-                    if($sectionDataOne['parent'] > 0)
-                        continue;
+            echo '<div class="'.$sa.'">';
 
-                    $object->display($sectionDataOne['id'], $label['submenu'], 'parent,submenu');
+                echo '<div class="container-fluid">';
 
-                }
+                    $object->display($this->getSection($sa, 'id'), $label['submenu'], 'parent,submenu');
+
+                echo '</div>';
 
             echo '</div>';
 
+        }
+
         echo '</div>';
 
-echo '</div>';
+    echo '</div>';
 
     echo '<div class="im-movie">';
 
