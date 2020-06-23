@@ -18,18 +18,6 @@ video {
 .im-movie .object {
   padding: 0;
 }
-.im-footer {
-  background-color: #777;
-  min-height: 300px;
-  color: #fff;
-  text-align: center;
-}
-.im-footer section {
-  padding: 10px;
-}
-.im-footer section p {
-  font-size: 18px;
-}
 .im-language ul {
   float: right;
 }
@@ -72,6 +60,12 @@ video {
 }
 .navbar ul li.active a {
   color: #e0c469;
+}
+.navbar ul li.active-hover {
+  border-bottom-color: #ac0413;
+}
+.navbar ul li.active-hover a {
+  color: #ac0413;
 }
 .navbar ul li:hover {
   border-color: #e0c469;
@@ -125,6 +119,73 @@ video {
   margin: 20px 0 20px;
 }
 .company-image .carousel-caption {
+  display: none !important;
+}
+.submenu .fa-chevron-down {
+  display: none;
+}
+.submenu .dropdown-menu {
+  border: none;
+}
+.submenu a {
+  color: #333;
+}
+.submenu i {
+  margin-top: 2px;
+  margin-right: 5px;
+  float: left;
+}
+.submenu .nav-item.dropdown > a {
+  color: #ac0413;
+  padding: 5px 0 5px;
+  border-bottom: 2px solid #ac0413;
+}
+.submenu .submenu-img > div {
+  margin-bottom: -171px;
+  margin-top: 70px;
+  z-index: 1;
+}
+.submenu .submenu-img .carousel-caption,
+.submenu .submenu-img .carousel-indicators,
+.submenu .submenu-img .carousel-control-prev,
+.submenu .submenu-img .carousel-control-next {
+  display: none !important;
+}
+.submenu .submenu-img img {
+  width: auto;
+}
+.im-breadcrumb {
+  text-transform: lowercase;
+  padding: 20px;
+}
+.im-breadcrumb a {
+  color: #aaa;
+  cursor: auto;
+}
+.im-breadcrumb a:hover {
+  text-decoration: none;
+}
+.im-breadcrumb i {
+  margin: 0 5px 0;
+  color: #ddd;
+}
+.im-footer {
+  background-color: #777;
+  min-height: 300px;
+  color: #fff;
+  text-align: center;
+}
+.im-footer section {
+  padding: 10px;
+}
+.im-footer section p {
+  font-size: 14px;
+}
+.im-footer .footer-logo img {
+  width: auto;
+  margin: 10px 0 20px;
+}
+.im-footer .carousel-caption {
   display: none !important;
 }
 #cookie {

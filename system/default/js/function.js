@@ -11,9 +11,11 @@ function submenu() {
 
         $this.find('.nav-item').addClass('show');
 
+        var $a = $this.find('.nav-item').children('a');
+
         $this.find('.dropdown-menu').addClass('show');
 
-        $this.find('.nav-link').attr('aria-expanded', 'true');
+        $a.attr('aria-expanded', 'true');
 
         submenuHref($this.parent().parent().attr('class'));
 
@@ -29,22 +31,88 @@ function submenuHref($href) {
     $hrefObject.attr('href', '#');
 
 }
+function activeMenu() {
+
+    var $currentUrl =  $('#url').val();
+
+    $('.submenu-data .submenu').each(function() {
+
+        var $this = $(this);
+
+        $this.find('.nav-item').each(function() {
+
+            var $this2 = $(this);
+
+            if($this2.children('a').attr('href') === $currentUrl) {
+
+                $('a#' + $this2.parents('.submenu').parent().parent().attr('class')).parent('li').addClass('active');
+
+            }
+
+            var $next = $this2.children('a').next('div');
+
+            if($next.length > 0) {
+
+                $next.children('a').each(function() {
+
+                    if($(this).attr('href') === $currentUrl) {
+
+                        $('a#' + $this2.parents('.submenu').parent().parent().attr('class')).parent('li').addClass('active');
+
+                    }
+
+                });
+
+            }
+
+        });
+
+    });
+}
 function submenuDisplay() {
 
     $('.menu .nav-link').click(function() {
 
+        var $this = $(this);
+
+        var $visible = false;
+        if($('.submenu-data').is(':visible') && $this.parent().hasClass('active-hover'))
+            $visible = true;
+
         $('.submenu-data, .submenu-data > div').hide();
 
-        var $source = $('.' + $(this).attr('id'));
+        $('.menu .nav-item').removeClass('active-hover');
+
+        var $source = $('.' + $this.attr('id'));
 
         if($source.length > 0) {
 
-            $('.submenu-data').show();
+            if($visible) {
 
-            $source.show();
+                $('.submenu-data').hide();
+
+                $source.hide();
+
+            }else {
+
+                $('.submenu-data').show();
+
+                $source.slideDown();
+
+                $this.parent().addClass('active-hover');
+
+            }
 
         }
 
     });
 
+}
+function breadcrumb() {
+
+    $('.im-breadcrumb a').each(function() {
+
+        $(this).attr('href', '#');
+
+    });
 }

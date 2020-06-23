@@ -12,18 +12,6 @@
     padding: 0;
   }
 }
-.im-footer{
-  background-color: @dark-gray;
-  min-height: 300px;
-  color: @white;
-  text-align: center;
-  section {
-    padding: 10px;
-    p {
-      font-size: 18px;
-    }
-  }
-}
 .im-language{
   ul{
     float: right;
@@ -73,6 +61,12 @@
       border-color: @gold;
       a{
         color: @gold;
+      }
+    }
+    li.active-hover{
+      border-bottom-color: @red;
+      a{
+        color: @red;
       }
     }
     li:hover{
@@ -125,6 +119,79 @@
 }
 .company-image{
   .carousel-caption{
+    display: none !important;
+  }
+}
+//Submenu style
+.submenu{
+  .fa-chevron-down{
+    display: none;
+  }
+  .dropdown-menu{
+    border: none;
+  }
+  a{
+    color: @black;
+  }
+  i{
+    margin-top: 2px;
+    margin-right: 5px;
+    float: left;
+  }
+  .nav-item.dropdown {
+    > a{
+      color: @red;
+      padding: 5px 0 5px;
+      border-bottom: 2px solid @red;
+    }
+  }
+  .submenu-img {
+    > div {
+      margin-bottom: -171px;
+      margin-top: 70px;
+      z-index: 1;
+    }
+    .carousel-caption, .carousel-indicators, .carousel-control-prev, .carousel-control-next {
+      display: none !important;
+    }
+    img {
+      width: auto;
+    }
+  }
+}
+.im-breadcrumb{
+  text-transform: lowercase;
+  padding: 20px;
+  a{
+    color: @gray;
+    cursor: auto;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  i{
+    margin: 0 5px 0;
+    color: @light-gray;
+  }
+}
+.im-footer{
+  background-color: @dark-gray;
+  min-height: 300px;
+  color: @white;
+  text-align: center;
+  section {
+    padding: 10px;
+    p {
+      font-size: 14px;
+    }
+  }
+  .footer-logo {
+    img {
+      width: auto;
+      margin: 10px 0 20px;
+    }
+  }
+  .carousel-caption {
     display: none !important;
   }
 }

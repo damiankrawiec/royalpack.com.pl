@@ -61,6 +61,13 @@ $label = $object->getAllLabel();
 
     echo '</div>';
 
+    //Breadcrumb
+    echo '<div class="container-fluid">';
+
+        $object->display($sectionData['id'], $label['im-breadcrumb']);
+
+    echo '</div>';
+
     echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
 
         $object->display($sectionData['id'], $label['box']);
@@ -79,6 +86,8 @@ $label = $object->getAllLabel();
         <?php $object->display($sectionData['id'], $label['company-image']); ?>
 
         <?php $object->display($sectionData['id'], $label['footer']); ?>
+
+        <?php $object->display($sectionData['id'], $label['footer-logo']); ?>
 
     </div>
 </div>
