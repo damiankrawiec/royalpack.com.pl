@@ -93,13 +93,23 @@ function submenuDisplay() {
 
                 $source.hide();
 
-            }else {
+            }else{
 
                 $('.submenu-data').show();
 
                 $source.slideDown();
 
                 $this.parent().addClass('active-hover');
+
+                if($('.navbar-toggler').is(':visible')){
+
+                    setTimeout(function () {
+
+                        $('.navbar-toggler').trigger('click');
+
+                    }, 1000);
+
+                }
 
             }
 

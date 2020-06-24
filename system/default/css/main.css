@@ -12,8 +12,11 @@ video {
   padding: 30px 0 30px;
   border-bottom: 6px solid #e0c469;
 }
+.logo {
+  margin-bottom: 20px;
+}
 .logo img {
-  margin-top: 19px;
+  margin-top: 9px;
 }
 .im-movie .object {
   padding: 0;
@@ -43,7 +46,7 @@ video {
   padding: 0;
 }
 .navbar ul li {
-  padding: 11px 7px 0;
+  padding: 4px 7px 0;
   text-align: center;
   margin: 0 2px 0;
   border: 1px solid #fff;
@@ -69,6 +72,14 @@ video {
 }
 .navbar ul li:hover {
   border-color: #e0c469;
+}
+.navbar-toggler {
+  margin-top: -75px;
+  border: 1px solid #777;
+}
+.navbar-toggler i {
+  font-size: 25px;
+  color: #777;
 }
 .movie-text {
   z-index: 1;
@@ -121,11 +132,19 @@ video {
 .company-image .carousel-caption {
   display: none !important;
 }
+.submenu {
+  padding-top: 30px;
+}
 .submenu .fa-chevron-down {
   display: none;
 }
 .submenu .dropdown-menu {
   border: none;
+  position: unset !important;
+  transform: unset !important;
+  will-change: unset !important;
+  top: unset !important;
+  left: unset !important;
 }
 .submenu a {
   color: #333;
