@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 30 Cze 2020, 09:15
+-- Czas generowania: 30 Cze 2020, 09:45
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -659,8 +659,8 @@ INSERT INTO `im_section` (`section_id`, `parent`, `name`, `name_second`, `name_u
 (5, 0, 'KARIERA', '', 'kariera', '', '', 'container', '', 5, 'on', 'on', 'off', 'off', '', '2020-06-16 08:10:59', '2020-06-24 13:57:15'),
 (6, 0, 'KONTAKT', '', 'kontakt', '', '', 'container', '', 6, 'on', 'on', 'off', 'off', '', '2020-06-16 08:11:10', '2020-06-24 13:57:22'),
 (7, 2, 'Profil działalności', '', 'profil-dzialalnosci', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'on', '', '2020-06-21 15:45:04', '2020-06-30 09:43:14'),
-(8, 3, 'OPOMIAROWANIA', '', 'opomiarowania', '', '', 'container', NULL, 1, 'on', 'off', 'off', 'off', NULL, '2020-06-21 15:49:55', '2020-06-23 11:31:54'),
-(9, 3, 'Standy', '', 'standy', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'off', 'off', 'off', '', '2020-06-21 15:50:11', '2020-06-24 13:52:15'),
+(8, 3, 'OPAKOWANIA', '', 'opakowania', '', '', 'container', '', 1, 'on', 'off', 'off', 'off', '', '2020-06-21 15:49:55', '2020-06-30 11:32:13'),
+(9, 3, 'POS Displays', '', 'pos-displays', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'off', 'off', 'off', '', '2020-06-21 15:50:11', '2020-06-30 11:32:26'),
 (10, 8, 'Standard FEFCO', '', 'standard-fefco', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'off', '', '2020-06-21 15:51:50', '2020-06-23 11:12:02'),
 (11, 8, 'SRP Displays', '', 'srp-displays', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', '', '2020-06-21 15:52:06', '2020-06-23 11:12:09'),
 (12, 8, 'Ekspozytory ladowe', '', 'ekspozytory-ladowe', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', '', '2020-06-21 15:53:42', '2020-06-23 11:12:13'),
