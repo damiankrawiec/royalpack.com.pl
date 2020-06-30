@@ -13,94 +13,106 @@ $label = $object->getAllLabel();
 
 <?php
 
-    $class = ($sectionData['class'] === '' ? 'container' : $sectionData['class']);
+    echo '<div id="'.$this->currentSection.'">';
 
-    echo '<div class="im-top">';
+        $class = ($sectionData['class'] === '' ? 'container' : $sectionData['class']);
 
-        echo '<div class="'.$class.'">';
+        echo '<div class="im-top">';
 
-            $object->display($sectionData['id'], $label['logo'], 'begin');
+            echo '<div class="'.$class.'">';
 
-            $object->display($sectionData['id'], $label['menu'], 'end');
+                $object->display($sectionData['id'], $label['logo'], 'begin');
+
+                $object->display($sectionData['id'], $label['menu'], 'end');
+
+            echo '</div>';
+
+            //Generate submenu for...
+            $submenuArray = array('o-nas', 'oferta', 'technologia');
+
+            echo '<div class="submenu-data im-hide">';
+
+            foreach ($submenuArray as $sa) {
+
+                echo '<div class="'.$sa.'">';
+
+                    echo '<div class="container-fluid">';
+
+                        $object->display($this->getSection($sa, 'id'), $label['submenu'], 'parent,submenu');
+
+                    echo '</div>';
+
+                echo '</div>';
+
+            }
+
+            echo '</div>';
 
         echo '</div>';
 
-        //Generate submenu for...
-        $submenuArray = array('o-nas', 'oferta', 'technologia');
+        if($this->checkSection($this->currentSection, 'strona-glowna', true)) {
 
-        echo '<div class="submenu-data im-hide">';
+            echo '<div class="im-movie">';
 
-        foreach ($submenuArray as $sa) {
-
-            echo '<div class="'.$sa.'">';
-
+                //Player with movie
                 echo '<div class="container-fluid">';
 
-                    $object->display($this->getSection($sa, 'id'), $label['submenu'], 'parent,submenu');
+                $object->display($sectionData['id'], $label['movie-text']);
+
+                $object->display($sectionData['id'], $label['movie']);
 
                 echo '</div>';
 
             echo '</div>';
 
+        }else{
+
+            //Breadcrumb
+            echo '<div class="container-fluid">';
+
+            $object->display($sectionData['id'], $label['im-breadcrumb']);
+
+            echo '</div>';
+
         }
 
-        echo '</div>';
+        echo '<div class="'.$class.'">';
 
-    echo '</div>';
+            $object->display($sectionData['id'], $label['prolog']);
 
-    echo '<div class="im-movie">';
-
-        //Player with movie
-        echo '<div class="container-fluid">';
-
-            $object->display($sectionData['id'], $label['movie-text']);
-
-            $object->display($sectionData['id'], $label['movie']);
+            $object->display($sectionData['id'], $label['box']);
 
         echo '</div>';
 
-    echo '</div>';
+        $this->parallax();
 
-    //Breadcrumb
-    echo '<div class="container-fluid">';
+        echo '<div class="'.$class.'">';
 
-        $object->display($sectionData['id'], $label['im-breadcrumb']);
+            $object->display($sectionData['id'], $label['content']);
 
-    echo '</div>';
+            $object->displayStatic($sectionData['id']);
 
-    echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
+        echo '</div>';
 
-        $object->display($sectionData['id'], $label['prolog']);
+    ?>
 
-        $object->display($sectionData['id'], $label['box']);
+    <div class="im-footer">
 
-    echo '</div>';
+        <div class="container-fluid">
 
-    $this->parallax();
+            <?php $object->display($sectionData['id'], $label['company-image']); ?>
 
-    echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
+            <?php $object->display($sectionData['id'], $label['footer']); ?>
 
-        $object->display($sectionData['id'], $label['content']);
+            <?php $object->display($sectionData['id'], $label['footer-logo']); ?>
 
-        $object->displayStatic($sectionData['id']);
-
-    echo '</div>';
-
-?>
-
-<div class="im-footer">
-    <div class="container-fluid">
-
-        <?php $object->display($sectionData['id'], $label['company-image']); ?>
-
-        <?php $object->display($sectionData['id'], $label['footer']); ?>
-
-        <?php $object->display($sectionData['id'], $label['footer-logo']); ?>
+        </div>
 
     </div>
-</div>
 
 <?php
+
+echo '</div>';
 
 if(!isset($session['cookie']))
     $object->display($sectionData['id'], $label['cookie']);
