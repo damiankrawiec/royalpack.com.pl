@@ -193,6 +193,7 @@ video {
   min-height: 300px;
   color: #fff;
   text-align: center;
+  margin-top: 40px;
 }
 .im-footer section {
   padding: 10px;
@@ -206,6 +207,13 @@ video {
 }
 .im-footer .carousel-caption {
   display: none !important;
+}
+.translation p {
+  line-height: 32px;
+}
+.translation p,
+.translation i {
+  font-size: 16px;
 }
 #cookie {
   position: fixed;

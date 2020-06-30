@@ -93,6 +93,8 @@ function submenuDisplay() {
 
                 $source.hide();
 
+                parallax('show');
+
             }else{
 
                 $('.submenu-data').show();
@@ -100,6 +102,8 @@ function submenuDisplay() {
                 $source.slideDown();
 
                 $this.parent().addClass('active-hover');
+
+                parallax('hide');
 
                 if($('.navbar-toggler').is(':visible')){
 
@@ -125,4 +129,22 @@ function breadcrumb() {
         $(this).attr('href', '#');
 
     });
+}
+function parallax($action) {
+
+    if($action === 'hide') {
+
+        $('.parallax-mirror').hide();
+
+        $('.parallax-window').hide();
+
+    }
+    if($action === 'show') {
+
+        $('.parallax-mirror').show();
+
+        $('.parallax-window').show();
+
+    }
+
 }

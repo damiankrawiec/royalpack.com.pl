@@ -70,7 +70,15 @@ $label = $object->getAllLabel();
 
     echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
 
+        $object->display($sectionData['id'], $label['prolog']);
+
         $object->display($sectionData['id'], $label['box']);
+
+    echo '</div>';
+
+    $this->parallax();
+
+    echo '<div class="'.$class.'" id="'.$this->currentSection.'">';
 
         $object->display($sectionData['id'], $label['content']);
 
