@@ -589,3 +589,74 @@ function inputLengthOneField($thisSize) {
     }
 
 }
+
+//Add custom icon to cms editor
+function iconToEditor() {
+
+    if($('.tox-tinymce').length > 0) {
+
+        var $iconArray = [];
+
+        var $domInsert = '<div role="group" class="tox-toolbar__primary"><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group">';
+
+        $('#icon-to-editor > div').each(function() {
+
+            var $this = $(this);
+
+            var $icon = $this.html();
+
+            var $idElement = $this.attr('id');
+
+            $iconArray.push($idElement);
+
+            $domInsert += '<button aria-label="Preview" title="Preview" type="button" tabindex="-1" class="tox-tbtn" id="' + $idElement + '">' + $icon + '</button>';
+
+        });
+
+        $domInsert += '</div></div>';
+
+        $('.tox-toolbar-overlord').append($domInsert);
+
+        iconListener($iconArray);
+
+    }
+
+}
+
+function iconListener($iconArray) {
+
+    var $iconArrayCount = $iconArray.length;
+
+    var $i;
+
+    for($i = 0; $i < $iconArrayCount; $i++) {
+
+        $('#' + $iconArray[$i]).on('click', function() {
+
+            $('.' + $(this).attr('id')).fadeIn();
+
+        });
+
+    }
+
+    $('.editor-data > .im-close').click(function() {
+
+        $(this).parent().fadeOut();
+
+    });
+
+    $('.editor-data > table tr').click(function() {
+
+        var $this = $(this);
+
+        if($this.find('.img').length > 0) {
+
+            var $img = $this.find('.img img');
+
+            tinymce.activeEditor.selection.setContent(tinymce.activeEditor.dom.createHTML('img', {src: $img.attr('src'), title: $img.attr('title'), style: $img.attr('style'), class: 'content-img'}));
+
+        }
+
+    });
+
+}
