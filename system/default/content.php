@@ -61,6 +61,8 @@ $label = $object->getAllLabel();
 
                 $object->display($sectionData['id'], $label['movie']);
 
+                $object->display($sectionData['id'], $label['slider']);
+
                 echo '</div>';
 
             echo '</div>';
