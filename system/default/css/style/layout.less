@@ -152,10 +152,19 @@
   a{
     color: @black;
   }
+  .dropdown-item {
+    padding: 7px;
+  }
+  .nav-item:not(:last-child) a, .dropdown-item:not(:last-child){
+    border-bottom: 1px solid @lighter-gray;
+  }
   i{
     margin-top: 2px;
     margin-right: 5px;
     float: left;
+  }
+  .nav-item:not(.dropdown) {
+    //border-bottom: 1px solid @lighter-gray;
   }
   .nav-item.dropdown {
     > a{

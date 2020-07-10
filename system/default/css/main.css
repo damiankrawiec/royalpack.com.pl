@@ -149,6 +149,13 @@ video {
 .submenu a {
   color: #333;
 }
+.submenu .dropdown-item {
+  padding: 7px;
+}
+.submenu .nav-item:not(:last-child) a,
+.submenu .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
 .submenu i {
   margin-top: 2px;
   margin-right: 5px;
