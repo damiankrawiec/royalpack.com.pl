@@ -13,7 +13,7 @@ $label = $object->getAllLabel();
 
 <?php
 
-    echo '<div id="'.$this->currentSection.'">';
+    echo '<div id="'.$this->currentSection.'" class="im-content">';
 
         $class = ($sectionData['class'] === '' ? 'container' : $sectionData['class']);
 

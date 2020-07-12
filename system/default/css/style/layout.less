@@ -1,6 +1,15 @@
 .im-top{
   padding: 30px 0 30px;
   border-bottom: 6px solid @gold;
+  background: @white;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+.im-top.fixed {
+  position: fixed;
 }
 .logo{
   margin-bottom: 20px;
@@ -44,6 +53,7 @@
 }
 .navbar{
   padding: 0;
+  margin-top: 7px;
   ul{
     li{
       padding: 4px 7px 0;

@@ -14,4 +14,6 @@ $(function(){
     //Remove from breadcrumb href
     breadcrumb();
 
+    scrollFixedMenu();
+
 });
