@@ -13,6 +13,8 @@ $label = $object->getAllLabel();
 
 <?php
 
+    $object->display($sectionData['id'], $label['flags']);
+
     echo '<div id="'.$this->currentSection.'" class="im-content">';
 
         $class = ($sectionData['class'] === '' ? 'container' : $sectionData['class']);
@@ -99,6 +101,12 @@ $label = $object->getAllLabel();
     ?>
 
     <div class="im-footer">
+
+        <div class="container-fluid">
+
+            <?php $object->display($sectionData['id'], $label['map']); ?>
+
+        </div>
 
         <div class="container-fluid">
 

@@ -13,7 +13,7 @@ video {
   border-bottom: 6px solid #e0c469;
   background: #fff;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   position: relative;
@@ -218,6 +218,10 @@ video {
 .im-footer section p {
   font-size: 14px;
 }
+.im-footer .map div,
+.im-footer .company-image div {
+  padding: 0;
+}
 .im-footer .footer-logo img {
   width: auto;
   margin: 10px 0 20px;
@@ -269,6 +273,56 @@ video {
 .img-right span {
   display: block;
   text-align: center;
+}
+.map div {
+  height: 350px;
+}
+.im-form input:not([type="button"]) {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 5px;
+}
+.im-form input[type="button"] {
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-left: 5px;
+}
+.im-form .tox-tinymce {
+  border: none;
+}
+.im-form .tox-sidebar-wrap {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.im-form .tox-statusbar {
+  display: none !important;
+}
+.flags {
+  position: fixed;
+  width: 30px;
+  top: 200px;
+  right: -1px;
+  z-index: 3;
+  opacity: 0.4;
+}
+.flags div,
+.flags ul,
+.flags li {
+  margin: 0;
+  padding: 0;
+}
+.flags img {
+  border: 1px solid #ddd;
+}
+.flags li {
+  list-style-type: none;
+  line-height: 0;
+  margin: 5px 0;
 }
 @media (max-width: 992px) {
   .im-top.fixed {
