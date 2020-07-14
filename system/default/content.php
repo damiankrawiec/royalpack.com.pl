@@ -13,7 +13,7 @@ $label = $object->getAllLabel();
 
 <?php
 
-    $object->display($sectionData['id'], $label['flags']);
+    $object->display($sectionData['id'], $label['language']);
 
     echo '<div id="'.$this->currentSection.'" class="im-content">';
 
@@ -93,6 +93,8 @@ $label = $object->getAllLabel();
         echo '<div class="'.$class.'">';
 
             $object->display($sectionData['id'], $label['content']);
+
+            $object->display($sectionData['id'], $label['file']);
 
             $object->displayStatic($sectionData['id']);
 

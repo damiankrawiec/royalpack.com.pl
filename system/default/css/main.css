@@ -131,13 +131,26 @@ video {
   color: #aaa;
   line-height: 26px;
 }
-.box .object .link {
-  background-color: #ac0413;
-  color: #fff;
-}
 .box .object .icon,
 .box .object .link {
   margin: 20px 0 20px;
+}
+.link {
+  background-color: #ac0413;
+  color: #fff;
+}
+.im-box .carousel {
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.im-box .carousel img {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .company-image .carousel-caption {
   display: none !important;
@@ -257,8 +270,25 @@ video {
   padding-left: 0;
 }
 .list-group-flush li {
-  list-style-type: disc;
   font-weight: bold;
+}
+.im-list-group {
+  padding-left: 26px;
+}
+.im-list-group li {
+  list-style-type: disc;
+  margin-top: 20px;
+}
+.im-list-group li strong {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.im-list-group li div {
+  color: #777;
+}
+.im-list-group li div,
+.im-list-group li a {
+  font-size: 13px;
 }
 .img-right {
   float: right;
@@ -268,6 +298,9 @@ video {
   -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
   box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   margin-left: 30px;
 }
 .img-right span {
@@ -302,27 +335,46 @@ video {
 .im-form .tox-statusbar {
   display: none !important;
 }
-.flags {
-  position: fixed;
-  width: 30px;
-  top: 200px;
-  right: -1px;
-  z-index: 3;
-  opacity: 0.4;
-}
-.flags div,
-.flags ul,
-.flags li {
+.file div,
+.language div,
+.file ul,
+.language ul,
+.file li,
+.language li {
   margin: 0;
   padding: 0;
 }
-.flags img {
-  border: 1px solid #ddd;
+.file {
+  margin-top: 10px;
 }
-.flags li {
+.file i,
+.file a {
+  float: left;
+  margin-top: 6px;
+}
+.file li {
+  border: none;
+}
+.file i {
+  padding: 3px;
+}
+.language {
+  position: fixed;
+  top: 29px;
+  right: -1px;
+  z-index: 3;
+}
+.language li {
   list-style-type: none;
-  line-height: 0;
-  margin: 5px 0;
+  margin: 1px 0;
+  padding: 7px 7px 4px;
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  background: #333;
+}
+.language li a {
+  color: #e0c469;
 }
 @media (max-width: 992px) {
   .im-top.fixed {
