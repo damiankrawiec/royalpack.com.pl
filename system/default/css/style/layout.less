@@ -149,9 +149,14 @@
     }
   }
 }
-.im-box-icon {
+.im-box-list {
+  p{
+    line-height: 46px !important;
+  }
   i {
-    font-size: 29px;
+    font-size: 50px !important;
+    color: @gold;
+    margin-bottom: 10px;
   }
 }
 .company-image{
@@ -224,6 +229,13 @@
   i{
     margin: 0 5px 0;
     color: @light-gray;
+  }
+}
+.im-breadcrumb-parallax{
+  margin-top: -60px;
+  color: @white;
+  a, i {
+    color: @white;
   }
 }
 .im-footer{
@@ -382,4 +394,24 @@
       color: @gold;
     }
   }
+}
+#dzial-kontroli-jakosci .content {
+
+  .im-box-list:nth-child(1) .left-list {
+    padding-top: 28px;
+  }
+  .im-box-list:nth-child(2), .im-box-list:nth-child(3) {
+    .left-list {
+      padding-top: 57px;
+    }
+  }
+  .im-box-list:nth-child(4), .im-box-list:nth-child(5) {
+    .left-list {
+      padding-top: 145px;
+    }
+  }
+  .im-box-list:nth-child(6) .left-list {
+    padding-top: 72px;
+  }
+
 }

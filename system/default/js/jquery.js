@@ -16,4 +16,6 @@ $(function(){
 
     scrollFixedMenu();
 
+    whenParallaxChangeBreadcrumb();
+
 });

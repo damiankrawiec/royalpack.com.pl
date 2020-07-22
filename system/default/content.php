@@ -71,6 +71,8 @@ $label = $object->getAllLabel();
 
         }else{
 
+            $this->parallax();
+
             //Breadcrumb
             echo '<div class="container-fluid">';
 
@@ -87,8 +89,6 @@ $label = $object->getAllLabel();
             $object->display($sectionData['id'], $label['box']);
 
         echo '</div>';
-
-        $this->parallax();
 
         echo '<div class="'.$class.'">';
 

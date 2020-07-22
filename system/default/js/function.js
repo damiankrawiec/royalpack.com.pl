@@ -201,3 +201,13 @@ function scrollFixedMenu() {
         });
 
 }
+
+function whenParallaxChangeBreadcrumb() {
+
+    if($('.parallax-window').length) {
+
+        $('.im-breadcrumb').addClass('im-breadcrumb-parallax');
+
+    }
+
+}
