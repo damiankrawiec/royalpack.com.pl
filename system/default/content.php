@@ -128,3 +128,9 @@ echo '</div>';
 
 if(!isset($session['cookie']))
     $object->display($sectionData['id'], $label['cookie']);
+
+$currentLanguageDisplay = 'language-pl';
+if($this->currentLanguage)
+    $currentLanguageDisplay = 'language-'.$this->currentLanguage;
+
+echo '<input type="hidden" id="'.$currentLanguageDisplay.'">';

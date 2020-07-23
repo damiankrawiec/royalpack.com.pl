@@ -211,3 +211,27 @@ function whenParallaxChangeBreadcrumb() {
     }
 
 }
+
+function showFile() {
+
+    if($('#ogolne-warunki-handlowe').length) {
+
+        var $showFile = '';
+        if($('#language-pl').length)
+            $showFile = 'im_file-name-3';
+
+        if($('#language-de').length)
+            $showFile = 'im_file-name-4';
+
+        if($('#language-en').length)
+            $showFile = 'im_file-name-5';
+
+        if($showFile !== '') {
+
+            $('#' + $showFile).parents('.list-group-item').css('display', 'block');
+
+        }
+
+    }
+
+}
