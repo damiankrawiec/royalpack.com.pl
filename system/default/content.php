@@ -71,6 +71,7 @@ $label = $object->getAllLabel();
 
         }else{
 
+            //Parallax in another section than main, on the top
             $this->parallax();
 
             //Breadcrumb
