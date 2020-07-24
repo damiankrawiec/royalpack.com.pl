@@ -235,3 +235,33 @@ function showFile() {
     }
 
 }
+
+function buttonEvent() {
+
+    $('.show-object').click(function() {
+
+        var $this = $(this);
+
+        var $object = $('.' + $this.attr('id'));
+
+        $object.slideToggle('normal', function() {
+
+            if($object.is(':hidden')) {
+
+                $this.removeClass('fa-chevron-up');
+
+                $this.addClass('fa-chevron-down');
+
+            }else{
+
+                $this.removeClass('fa-chevron-down');
+
+                $this.addClass('fa-chevron-up');
+
+            }
+
+        });
+
+    });
+
+}

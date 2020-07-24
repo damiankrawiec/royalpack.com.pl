@@ -140,6 +140,12 @@
   background-color: @red;
   color: @white;
 }
+.show-object {
+  color: @red;
+  font-size: 29px !important;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
 .im-box {
   .carousel {
     .light-shadow();
@@ -147,6 +153,9 @@
     img {
       .round-corner(@box-round-corner);
     }
+  }
+  .carousel-caption{
+    display: none !important;
   }
 }
 .im-box-list {

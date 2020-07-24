@@ -139,6 +139,12 @@ video {
   background-color: #ac0413;
   color: #fff;
 }
+.show-object {
+  color: #ac0413;
+  font-size: 29px !important;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
 .im-box .carousel {
   -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
@@ -151,6 +157,9 @@ video {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+}
+.im-box .carousel-caption {
+  display: none !important;
 }
 .im-box-list p {
   line-height: 46px !important;
