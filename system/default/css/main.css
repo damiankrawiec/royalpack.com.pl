@@ -30,6 +30,9 @@ video {
 .im-movie .object {
   padding: 0;
 }
+.slider {
+  margin-bottom: 15px;
+}
 .im-language ul {
   float: right;
 }
@@ -332,6 +335,22 @@ video {
   display: block;
   text-align: center;
 }
+.img-center {
+  text-align: center;
+}
+.img-center img {
+  width: 40%;
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+.img-center span {
+  display: none;
+}
 .map div {
   height: 350px;
 }
@@ -393,6 +412,14 @@ video {
   padding-left: 5px;
   margin: 1px 0;
 }
+.content ul {
+  padding: 0;
+  margin-top: 10px;
+}
+.content ul li i {
+  float: left;
+  margin: 3px 5px 0 0;
+}
 .language {
   position: fixed;
   top: 29px;
@@ -410,6 +437,16 @@ video {
 }
 .language li a {
   color: #e0c469;
+}
+.eu {
+  position: absolute;
+  right: -3px;
+  top: 140px;
+  width: 60px;
+  z-index: 1;
+}
+.eu .carousel-caption {
+  display: none !important;
 }
 #dzial-kontroli-jakosci .content .im-box-list:nth-child(1) .left-list {
   padding-top: 28px;
@@ -452,10 +489,20 @@ video {
     width: 100%;
     margin: 0;
   }
+  .img-center img {
+    width: 100%;
+    margin: 0;
+  }
+  #strona-glowna .eu {
+    top: unset;
+  }
 }
 @media (max-width: 430px) {
   .navbar-toggler {
     margin-top: -75px;
+  }
+  .eu {
+    top: 130px;
   }
 }
 @media (max-width: 370px) {

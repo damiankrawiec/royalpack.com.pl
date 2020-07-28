@@ -83,6 +83,8 @@ $label = $object->getAllLabel();
 
         }
 
+        $object->display($sectionData['id'], $label['eu']);
+
         echo '<div class="'.$class.'">';
 
             $object->display($sectionData['id'], $label['prolog']);
@@ -96,6 +98,8 @@ $label = $object->getAllLabel();
             $object->display($sectionData['id'], $label['content']);
 
             $object->display($sectionData['id'], $label['file']);
+
+            $object->display($sectionData['id'], $label['image']);
 
             $object->displayStatic($sectionData['id']);
 

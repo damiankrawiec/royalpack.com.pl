@@ -22,6 +22,9 @@
     padding: 0;
   }
 }
+.slider{
+  margin-bottom: 15px;
+}
 .im-language{
   ul{
     float: right;
@@ -333,6 +336,18 @@
     text-align: center;
   };
 }
+.img-center {
+  text-align: center;
+  img {
+    width: 40%;
+    .light-shadow();
+    .round-corner(@box-round-corner);
+    margin: 10px 0;
+  }
+  span {
+    display: none;
+  };
+}
 .map div{
   height: 350px;
 }
@@ -388,6 +403,18 @@
     margin: 1px 0;
   }
 }
+.content{
+  ul{
+    padding: 0;
+    margin-top: 10px;
+    li{
+      i {
+        float: left;
+        margin: 3px 5px 0 0;
+      }
+    }
+  }
+}
 .language {
   position: fixed;
   top: 29px;
@@ -402,6 +429,16 @@
     a{
       color: @gold;
     }
+  }
+}
+.eu {
+  position: absolute;
+  right: -3px;
+  top: 140px;
+  width: 60px;
+  z-index: 1;
+  .carousel-caption {
+    display: none !important;
   }
 }
 #dzial-kontroli-jakosci .content {
