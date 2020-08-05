@@ -451,26 +451,21 @@ video {
 .eu .carousel-caption {
   display: none !important;
 }
-#dzial-kontroli-jakosci .content .im-box-list:nth-child(1) .left-list {
-  padding-top: 28px;
+#dzial-kontroli-jakosci .content .im-box-list {
+  margin-bottom: 60px;
 }
-#dzial-kontroli-jakosci .content .im-box-list:nth-child(2) .left-list,
-#dzial-kontroli-jakosci .content .im-box-list:nth-child(3) .left-list {
-  padding-top: 57px;
-}
-#dzial-kontroli-jakosci .content .im-box-list:nth-child(4) .left-list,
-#dzial-kontroli-jakosci .content .im-box-list:nth-child(5) .left-list {
-  padding-top: 145px;
-}
-#dzial-kontroli-jakosci .content .im-box-list:nth-child(6) .left-list {
-  padding-top: 72px;
+#dzial-kontroli-jakosci .content .im-box-list .left-list {
+  padding-top: 15px;
 }
 #ogolne-warunki-handlowe .file .list-group-item {
   display: none;
 }
 @media (max-width: 1199px) {
+  #dzial-kontroli-jakosci .content .im-box-list {
+    margin-bottom: 10px;
+  }
   #dzial-kontroli-jakosci .content .im-box-list .left-list {
-    padding-top: 20px !important;
+    padding-top: 10px;
   }
 }
 @media (max-width: 992px) {

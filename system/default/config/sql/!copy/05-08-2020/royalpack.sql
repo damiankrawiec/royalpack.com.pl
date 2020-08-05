@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 05 Sie 2020, 08:43
+-- Czas generowania: 05 Sie 2020, 13:25
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -566,7 +566,7 @@ INSERT INTO `im_object` (`object_id`, `type_id`, `label_id`, `section`, `section
 (21, 13, 16, 0, '', 'Mapa w stopce', '', NULL, '', '', '', '', '', '', '51.921311,15.411415', 1, 'on', 'off', '', '2020-07-13', '2020-07-13 20:04:02', '2020-07-24 09:57:04'),
 (22, 14, 14, 0, '', 'Sekcja kontakt', '<i class=\"fal fa-grip-lines\"></i> Kontakt <i class=\"fal fa-grip-lines\"></i>', NULL, '', '', '', '', '', '', '', 1, 'on', 'off', '', '2020-07-13', '2020-07-13 20:57:51', '2020-07-13 20:59:01'),
 (23, 15, 6, 0, '', 'Sekcja kontakt', '', '<p><span style=\"font-size: 18pt;\">Royalpack, Tatar &nbsp;Sp. j.&nbsp;</span></p>\r\n<p><strong>Adres:</strong></p>\r\n<p>Aleja Brzozowa 2A, Słone</p>\r\n<p>66-008 Świdnica</p>\r\n<p><strong>Telefon:</strong> (+48) 534 747 400</p>\r\n<p><strong>E-mail:</strong> biuro@royalpack.com.pl</p>', '', '', '', 'damian.krawiec@gmail.com', '', '', '', 1, 'on', 'off', '', '2020-07-13', '2020-07-13 21:03:15', '2020-07-13 21:07:24'),
-(25, 16, 18, 0, '', 'Języki', '', NULL, '', '', '', '', '', '', '', 1, 'on', 'off', 'Element zawierający panel przełączania języków', '2020-07-14', '2020-07-14 17:05:17', '2020-07-14 17:06:02'),
+(25, 16, 18, 0, '', 'Języki', '', NULL, '', '', '', '', '', '', '', 1, 'on', 'off', 'Element zawierający panel przełączania języków', '2020-07-14', '2020-07-14 17:05:17', '2020-08-05 15:19:13'),
 (27, 15, 6, 0, '', 'Sekcja kariera', '', '<p><span style=\"font-size: 18pt;\">Royalpack, Tatar &nbsp;Sp. j.&nbsp;</span></p>\r\n<p><strong>Adres:</strong></p>\r\n<p>Aleja Brzozowa 2A, Słone</p>\r\n<p>66-008 Świdnica</p>\r\n<p><strong>Telefon:</strong> (+48) 534 747 400</p>\r\n<p><strong>E-mail:</strong> biuro@royalpack.com.pl</p>', '', '', '', 'm@internet.media.pl', 'Dodaj swoje CV (doc, docx, pdf): ', '', '', 1, 'on', 'off', '', '2020-07-14', '2020-07-14 17:27:09', '2020-08-05 08:00:41'),
 (28, 11, 14, 0, '', 'Kariera', '<i class=\"fal fa-grip-lines\"></i> Kariera <i class=\"fal fa-grip-lines\"></i>', '<p>Jeśli chcesz pracować w dynamicznie rozwijającej się firmie o wysokim potencjale i stale rosnących możliwościach zapraszamy do składania aplikacji poprzez wypełnienie formularza.</p>', '', '', '', '', '', '', '', 3, 'on', 'off', '', '2020-07-14', '2020-07-14 17:29:08', '2020-07-14 17:30:27'),
 (29, 17, 19, 0, '', 'Obowiązek informacyjny - kontakt', '', NULL, '', '', '', '', '', '', '', 1, 'on', 'off', '', '2020-07-14', '2020-07-14 17:37:17', '2020-07-24 08:11:13'),
@@ -1035,7 +1035,7 @@ CREATE TABLE IF NOT EXISTS `im_section_object` (
   PRIMARY KEY (`section_object_id`),
   KEY `section_id` (`section_id`),
   KEY `object_id` (`object_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1733 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1759 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_section_object`
@@ -1163,28 +1163,6 @@ INSERT INTO `im_section_object` (`section_object_id`, `section_id`, `object_id`)
 (763, 6, 10),
 (799, 6, 22),
 (801, 6, 23),
-(1040, 1, 25),
-(1041, 5, 25),
-(1042, 6, 25),
-(1043, 7, 25),
-(1044, 10, 25),
-(1045, 11, 25),
-(1046, 12, 25),
-(1047, 13, 25),
-(1048, 14, 25),
-(1049, 15, 25),
-(1050, 16, 25),
-(1051, 17, 25),
-(1052, 18, 25),
-(1053, 19, 25),
-(1054, 20, 25),
-(1055, 21, 25),
-(1056, 22, 25),
-(1057, 23, 25),
-(1058, 24, 25),
-(1059, 25, 25),
-(1060, 26, 25),
-(1061, 27, 25),
 (1067, 5, 28),
 (1101, 22, 33),
 (1118, 22, 31),
@@ -1360,7 +1338,33 @@ INSERT INTO `im_section_object` (`section_object_id`, `section_id`, `object_id`)
 (1724, 29, 78),
 (1727, 29, 79),
 (1728, 29, 80),
-(1732, 5, 27);
+(1732, 5, 27),
+(1733, 1, 25),
+(1734, 5, 25),
+(1735, 6, 25),
+(1736, 7, 25),
+(1737, 8, 25),
+(1738, 9, 25),
+(1739, 10, 25),
+(1740, 11, 25),
+(1741, 12, 25),
+(1742, 13, 25),
+(1743, 14, 25),
+(1744, 15, 25),
+(1745, 16, 25),
+(1746, 17, 25),
+(1747, 18, 25),
+(1748, 19, 25),
+(1749, 20, 25),
+(1750, 21, 25),
+(1751, 22, 25),
+(1752, 23, 25),
+(1753, 24, 25),
+(1754, 25, 25),
+(1755, 26, 25),
+(1756, 27, 25),
+(1757, 28, 25),
+(1758, 29, 25);
 
 -- --------------------------------------------------------
 
