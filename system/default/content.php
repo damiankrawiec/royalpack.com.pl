@@ -85,26 +85,29 @@ $label = $object->getAllLabel();
 
         $object->display($sectionData['id'], $label['eu']);
 
-        echo '<div class="'.$class.'">';
+        echo '<div class="animated fadeInUp">';
 
-            $object->display($sectionData['id'], $label['prolog']);
+            echo '<div class="'.$class.'">';
 
-            $object->display($sectionData['id'], $label['box']);
+                $object->display($sectionData['id'], $label['prolog']);
+
+                $object->display($sectionData['id'], $label['box']);
+
+            echo '</div>';
+
+            echo '<div class="'.$class.'">';
+
+                $object->display($sectionData['id'], $label['content']);
+
+                $object->display($sectionData['id'], $label['file']);
+
+                $object->display($sectionData['id'], $label['image']);
+
+                $object->displayStatic($sectionData['id']);
+
+            echo '</div>';
 
         echo '</div>';
-
-        echo '<div class="'.$class.'">';
-
-            $object->display($sectionData['id'], $label['content']);
-
-            $object->display($sectionData['id'], $label['file']);
-
-            $object->display($sectionData['id'], $label['image']);
-
-            $object->displayStatic($sectionData['id']);
-
-        echo '</div>';
-
     ?>
 
     <div class="im-footer">

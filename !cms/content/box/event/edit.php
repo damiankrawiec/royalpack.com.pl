@@ -45,9 +45,14 @@ if(isset($eventData) and is_array($eventData) and count($eventData) > 0) {
 
                 if($field['type'] == 'text') {
 
-                    echo '<input type="text" name="form_' . $i . '" class="form-control size' . $require . '" id="' . $i . '" placeholder="' . $translation['edit'][$i] . '" size="' . (isset($field['size']) ? $field['size'] : 0) . '" value="' . $editDataOne . '"' . $readonly . '>';
+                    $size = ' size';
+                    if($table == 'im_translation' or $table == 'im_form')
+                        $size = '';
 
-                    echo $translation['edit']['left-char'].': <span class="badge badge-info">-</span>';
+                    echo '<input type="text" name="form_' . $i . '" class="form-control'.$size . $require . '" id="' . $i . '" placeholder="' . $translation['edit'][$i] . '" size="' . (isset($field['size']) ? $field['size'] : 0) . '" value="' . $editDataOne . '"' . $readonly . '>';
+
+                    if($table != 'im_translation' and $table != 'im_form')
+                        echo $translation['edit']['left-char'].': <span class="badge badge-info">-</span>';
 
                 }
 
@@ -62,7 +67,7 @@ if(isset($eventData) and is_array($eventData) and count($eventData) > 0) {
 
                 if($field['type'] == 'preview') {
 
-                    echo '<div>'.$editDataOne.'</div>';
+                    echo '<div>'.html_entity_decode($editDataOne).'</div>';
 
                     echo '<input type="hidden" name="form_' . $i . '" id="' . $i . '" value="' . $editDataOne . '">';
 

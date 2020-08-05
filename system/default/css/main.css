@@ -354,13 +354,12 @@ video {
 .map div {
   height: 350px;
 }
-.im-form input:not([type="button"]) {
+.im-form input[type="text"] {
   border: none;
   border-bottom: 1px solid #ccc;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  padding: 5px;
 }
 .im-form input[type="button"] {
   border: 1px solid #ccc;
@@ -368,6 +367,10 @@ video {
   -moz-border-radius: 0;
   border-radius: 0;
   margin-left: 5px;
+}
+.im-form input[type="text"],
+.im-form input[type="file"] {
+  padding: 5px;
 }
 .im-form .tox-tinymce {
   border: none;
