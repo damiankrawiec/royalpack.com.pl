@@ -228,7 +228,7 @@ function showFile() {
 
         if($showFile !== '') {
 
-            $('#' + $showFile).parents('.list-group-item').css('display', 'block');
+            $('.' + $showFile).parents('.list-group-item').css('display', 'block');
 
         }
 
