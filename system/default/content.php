@@ -15,7 +15,7 @@ $label = $object->getAllLabel();
 
     $object->display($sectionData['id'], $label['language']);
 
-    echo '<div id="'.$this->currentSection.'" class="im-content">';
+    echo '<div id="'.$this->currentSection.'" class="im-content '.$this->currentLanguage.'-content">';
 
         $class = ($sectionData['class'] === '' ? 'container' : $sectionData['class']);
 

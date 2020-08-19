@@ -451,6 +451,10 @@ video {
 .eu .carousel-caption {
   display: none !important;
 }
+.en-content .request-proposal,
+.de-content .request-proposal {
+  display: none;
+}
 #dzial-kontroli-jakosci .content .im-box-list {
   margin-bottom: 60px;
 }
