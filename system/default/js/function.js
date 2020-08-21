@@ -1,8 +1,3 @@
-function menuFloatRight() {
-
-    $('.menu ul').addClass('ml-auto');
-
-}
 function submenu() {
 
     $('.submenu-data .submenu').each(function() {

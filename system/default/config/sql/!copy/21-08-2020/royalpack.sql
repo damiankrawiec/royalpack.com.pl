@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 21 Sie 2020, 09:28
+-- Czas generowania: 21 Sie 2020, 13:00
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -935,6 +935,7 @@ CREATE TABLE IF NOT EXISTS `im_section` (
   `status_copy` varchar(3) COLLATE utf8_polish_ci DEFAULT 'off',
   `status_popup` varchar(3) COLLATE utf8_polish_ci DEFAULT 'off',
   `status_parallax` varchar(3) COLLATE utf8_polish_ci DEFAULT 'off',
+  `status_link` varchar(3) COLLATE utf8_polish_ci NOT NULL DEFAULT 'on',
   `description` text COLLATE utf8_polish_ci,
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
@@ -945,36 +946,36 @@ CREATE TABLE IF NOT EXISTS `im_section` (
 -- Zrzut danych tabeli `im_section`
 --
 
-INSERT INTO `im_section` (`section_id`, `parent`, `name`, `name_second`, `name_url`, `meta`, `icon`, `class`, `popup`, `position`, `status`, `status_copy`, `status_popup`, `status_parallax`, `description`, `date_create`, `date_modify`) VALUES
-(1, 0, 'Strona główna', '', 'strona-glowna', 'Opis strony głownej', '', '', '', 1, 'off', 'on', 'off', 'off', '', '2020-06-09 16:25:42', '2020-06-23 10:49:17'),
-(2, 0, 'O NAS', '', 'o-nas', '', '', 'container', '', 2, 'on', 'off', 'off', 'off', '', '2020-06-16 08:09:19', '2020-07-22 20:23:27'),
-(3, 0, 'OFERTA', '', 'oferta', '', '', 'container', '', 3, 'on', 'off', 'off', 'off', '', '2020-06-16 08:10:11', '2020-07-22 20:23:27'),
-(4, 0, 'TECHNOLOGIA', '', 'technologia', '', '', 'container', '', 4, 'on', 'off', 'off', 'off', '', '2020-06-16 08:10:47', '2020-07-22 20:23:29'),
-(5, 0, 'KARIERA', '', 'kariera', '', '', 'container', '', 5, 'on', 'on', 'off', 'off', '', '2020-06-16 08:10:59', '2020-06-24 13:57:15'),
-(6, 0, 'KONTAKT', '', 'kontakt', '', '', 'container', '', 6, 'on', 'on', 'off', 'off', '', '2020-06-16 08:11:10', '2020-07-22 20:41:05'),
-(7, 2, 'Profil działalności', '', 'profil-dzialalnosci', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'on', '', '2020-06-21 15:45:04', '2020-08-18 16:35:50'),
-(8, 3, 'OPAKOWANIA', '', 'opakowania', '', '', 'container', '', 1, 'on', 'off', 'off', 'off', '', '2020-06-21 15:49:55', '2020-06-30 11:32:13'),
-(9, 3, 'POS Displays', '', 'pos-displays', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'off', 'off', 'off', '', '2020-06-21 15:50:11', '2020-06-30 11:32:26'),
-(10, 8, 'Standard FEFCO', '', 'standard-fefco', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'off', '', '2020-06-21 15:51:50', '2020-06-23 11:12:02'),
-(11, 8, 'SRP Displays', '', 'srp-displays', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', '', '2020-06-21 15:52:06', '2020-06-23 11:12:09'),
-(12, 8, 'Ekspozytory ladowe', '', 'ekspozytory-ladowe', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', '', '2020-06-21 15:53:42', '2020-06-23 11:12:13'),
-(13, 8, 'E-commerce boxes', '', 'e-commerce-boxes', '', 'fal fa-angle-right', 'container', '', 4, 'on', 'on', 'off', 'off', '', '2020-06-21 15:54:06', '2020-06-23 11:12:19'),
-(14, 8, 'Sila Liner', '', 'sila-liner', '', 'fal fa-angle-right', 'container', '', 5, 'on', 'on', 'off', 'off', '', '2020-06-21 15:54:22', '2020-06-23 11:12:25'),
-(15, 8, 'Projekty indywidualne', '', 'projekty-indywidualne', '', 'fal fa-angle-right', 'container', '', 6, 'on', 'on', 'off', 'off', '', '2020-06-21 15:54:40', '2020-06-23 11:12:31'),
-(16, 8, 'Projekty innowacyjne', '', 'projekty-innowacyjne', '', 'fal fa-angle-right', 'container', '', 7, 'on', 'on', 'off', 'off', '', '2020-06-21 15:54:58', '2020-06-23 11:12:36'),
-(17, 2, 'Historia firmy', '', 'historia-firmy', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', '', '2020-06-21 16:42:46', '2020-06-23 11:15:39'),
-(18, 2, 'Polityka rozwoju', '', 'polityka-rozwoju', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', '', '2020-06-21 16:43:04', '2020-06-23 11:15:45'),
-(19, 2, 'Obsługa klienta', '', 'obsluga-klienta', '', 'fal fa-angle-right', 'container', '', 4, 'on', 'on', 'off', 'off', '', '2020-06-21 16:43:28', '2020-06-23 11:15:51'),
-(20, 2, 'Ogólne warunki handlowe', '', 'ogolne-warunki-handlowe', '', 'fal fa-angle-right', 'container', '', 5, 'on', 'on', 'off', 'off', '', '2020-06-21 16:43:47', '2020-06-23 11:15:56'),
-(21, 2, 'Wyróżnienia', '', 'wyroznienia', '', 'fal fa-angle-right', 'container', '', 6, 'on', 'on', 'off', 'off', '', '2020-06-21 16:44:00', '2020-06-23 11:16:01'),
-(22, 2, 'Media o nas', '', 'media-o-nas', '', 'fal fa-angle-right', 'container', '', 7, 'on', 'on', 'off', 'off', '', '2020-06-21 16:45:01', '2020-06-23 11:16:06'),
-(23, 4, 'Offset', '', 'offset', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'off', '', '2020-06-21 17:06:29', '2020-07-21 16:52:11'),
-(24, 4, 'Flexo', '', 'flexo', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', '', '2020-06-21 17:06:43', '2020-07-21 16:52:11'),
-(25, 4, 'Park maszynowy', '', 'park-maszynowy', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', '', '2020-06-21 17:06:56', '2020-07-21 16:52:11'),
-(26, 4, 'R&D', '', 'rd', '', 'fal fa-angle-right', 'container', '', 4, 'on', 'on', 'off', 'off', '', '2020-06-21 17:07:12', '2020-07-21 16:52:11'),
-(27, 4, 'Innowacje', '', 'innowacje', '', 'fal fa-angle-right', 'container', '', 6, 'on', 'on', 'off', 'off', '', '2020-06-21 17:07:27', '2020-07-21 16:52:11'),
-(28, 4, 'Dział kontroli jakości', '', 'dzial-kontroli-jakosci', '', 'fal fa-angle-right', 'container', '', 5, 'on', 'on', 'off', 'on', '', '2020-07-21 16:51:31', '2020-07-22 21:09:34'),
-(29, 0, 'DOTACJA UE', '', 'dotacja-ue', '', '', 'container', '', 7, 'off', 'on', 'off', 'on', '', '2020-07-28 09:34:12', '2020-07-28 12:26:23');
+INSERT INTO `im_section` (`section_id`, `parent`, `name`, `name_second`, `name_url`, `meta`, `icon`, `class`, `popup`, `position`, `status`, `status_copy`, `status_popup`, `status_parallax`, `status_link`, `description`, `date_create`, `date_modify`) VALUES
+(1, 0, 'Strona główna', '', 'strona-glowna', 'Opis strony głownej', '', '', '', 1, 'off', 'on', 'off', 'off', 'on', '', '2020-06-09 16:25:42', '2020-06-23 10:49:17'),
+(2, 0, 'O NAS', '', 'o-nas', '', '', 'container', '', 2, 'on', 'off', 'off', 'off', 'on', '', '2020-06-16 08:09:19', '2020-07-22 20:23:27'),
+(3, 0, 'OFERTA', '', 'oferta', '', '', 'container', '', 3, 'on', 'off', 'off', 'off', 'on', '', '2020-06-16 08:10:11', '2020-07-22 20:23:27'),
+(4, 0, 'TECHNOLOGIA', '', 'technologia', '', '', 'container', '', 4, 'on', 'off', 'off', 'off', 'on', '', '2020-06-16 08:10:47', '2020-07-22 20:23:29'),
+(5, 0, 'KARIERA', '', 'kariera', '', '', 'container', '', 5, 'on', 'on', 'off', 'off', 'on', '', '2020-06-16 08:10:59', '2020-06-24 13:57:15'),
+(6, 0, 'KONTAKT', '', 'kontakt', '', '', 'container', '', 6, 'on', 'on', 'off', 'off', 'on', '', '2020-06-16 08:11:10', '2020-07-22 20:41:05'),
+(7, 2, 'Profil działalności', '', 'profil-dzialalnosci', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'on', 'on', '', '2020-06-21 15:45:04', '2020-08-18 16:35:50'),
+(8, 3, 'OPAKOWANIA', '', 'opakowania', '', '', 'container', '', 1, 'on', 'off', 'off', 'off', 'on', '', '2020-06-21 15:49:55', '2020-08-21 13:58:21'),
+(9, 3, 'POS Displays', '', 'pos-displays', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'off', 'off', 'off', 'on', '', '2020-06-21 15:50:11', '2020-06-30 11:32:26'),
+(10, 8, 'Standard FEFCO', '', 'standard-fefco', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:51:50', '2020-06-23 11:12:02'),
+(11, 8, 'SRP Displays', '', 'srp-displays', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:52:06', '2020-06-23 11:12:09'),
+(12, 8, 'Ekspozytory ladowe', '', 'ekspozytory-ladowe', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:53:42', '2020-06-23 11:12:13'),
+(13, 8, 'E-commerce boxes', '', 'e-commerce-boxes', '', 'fal fa-angle-right', 'container', '', 4, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:54:06', '2020-06-23 11:12:19'),
+(14, 8, 'Sila Liner', '', 'sila-liner', '', 'fal fa-angle-right', 'container', '', 5, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:54:22', '2020-06-23 11:12:25'),
+(15, 8, 'Projekty indywidualne', '', 'projekty-indywidualne', '', 'fal fa-angle-right', 'container', '', 6, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:54:40', '2020-06-23 11:12:31'),
+(16, 8, 'Projekty innowacyjne', '', 'projekty-innowacyjne', '', 'fal fa-angle-right', 'container', '', 7, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 15:54:58', '2020-06-23 11:12:36'),
+(17, 2, 'Historia firmy', '', 'historia-firmy', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 16:42:46', '2020-06-23 11:15:39'),
+(18, 2, 'Polityka rozwoju', '', 'polityka-rozwoju', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 16:43:04', '2020-06-23 11:15:45'),
+(19, 2, 'Obsługa klienta', '', 'obsluga-klienta', '', 'fal fa-angle-right', 'container', '', 4, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 16:43:28', '2020-06-23 11:15:51'),
+(20, 2, 'Ogólne warunki handlowe', '', 'ogolne-warunki-handlowe', '', 'fal fa-angle-right', 'container', '', 5, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 16:43:47', '2020-06-23 11:15:56'),
+(21, 2, 'Wyróżnienia', '', 'wyroznienia', '', 'fal fa-angle-right', 'container', '', 6, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 16:44:00', '2020-06-23 11:16:01'),
+(22, 2, 'Media o nas', '', 'media-o-nas', '', 'fal fa-angle-right', 'container', '', 7, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 16:45:01', '2020-06-23 11:16:06'),
+(23, 4, 'Offset', '', 'offset', '', 'fal fa-angle-right', 'container', '', 1, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 17:06:29', '2020-07-21 16:52:11'),
+(24, 4, 'Flexo', '', 'flexo', '', 'fal fa-angle-right', 'container', '', 2, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 17:06:43', '2020-07-21 16:52:11'),
+(25, 4, 'Park maszynowy', '', 'park-maszynowy', '', 'fal fa-angle-right', 'container', '', 3, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 17:06:56', '2020-07-21 16:52:11'),
+(26, 4, 'R&D', '', 'rd', '', 'fal fa-angle-right', 'container', '', 4, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 17:07:12', '2020-07-21 16:52:11'),
+(27, 4, 'Innowacje', '', 'innowacje', '', 'fal fa-angle-right', 'container', '', 6, 'on', 'on', 'off', 'off', 'on', '', '2020-06-21 17:07:27', '2020-07-21 16:52:11'),
+(28, 4, 'Dział kontroli jakości', '', 'dzial-kontroli-jakosci', '', 'fal fa-angle-right', 'container', '', 5, 'on', 'on', 'off', 'on', 'on', '', '2020-07-21 16:51:31', '2020-07-22 21:09:34'),
+(29, 0, 'DOTACJA UE', '', 'dotacja-ue', '', '', 'container', '', 7, 'off', 'on', 'off', 'on', 'on', '', '2020-07-28 09:34:12', '2020-07-28 12:26:23');
 
 --
 -- Wyzwalacze `im_section`
@@ -1778,7 +1779,7 @@ CREATE TABLE IF NOT EXISTS `im_type_property` (
 
 INSERT INTO `im_type_property` (`type_property_id`, `type_id`, `property_id`, `class`, `class_field`, `position`, `status`, `description`, `date_create`, `date_modify`) VALUES
 (1, 1, 4, 'col-12', 'animated zoomIn', 1, 'on', '', '2020-06-10 11:05:51', '2020-06-16 09:18:08'),
-(2, 2, 7, 'col-12', 'navbar navbar-expand-lg animated fadeInLeftBig', 1, 'on', '', '2020-06-10 11:10:25', '2020-07-22 20:15:05'),
+(2, 2, 7, 'col-12', 'navbar navbar-expand-lg animated fadeInLeftBig im-right', 1, 'on', '', '2020-06-10 11:10:25', '2020-08-21 14:36:10'),
 (3, 3, 15, 'col-12', '', 1, 'on', '', '2020-06-11 13:09:58', '2020-07-08 13:39:19'),
 (4, 4, 2, 'col-12 text-center', 'animated swing', 1, 'on', '', '2020-06-16 10:50:26', '2020-07-08 13:40:57'),
 (5, 5, 4, 'col-12', '', 1, 'on', '', '2020-06-16 11:43:49', '2020-06-16 11:44:04'),

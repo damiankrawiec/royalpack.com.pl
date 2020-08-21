@@ -232,6 +232,9 @@ video {
 }
 .im-breadcrumb a {
   color: #aaa;
+  cursor: pointer;
+}
+.im-breadcrumb a.im-last {
   cursor: auto;
 }
 .im-breadcrumb a:hover {

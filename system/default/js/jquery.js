@@ -1,7 +1,5 @@
 $(function(){
 
-    menuFloatRight();
-
     //show submenu in submenu
     submenu();
 
@@ -12,7 +10,7 @@ $(function(){
     activeMenu();
 
     //Remove from breadcrumb href
-    breadcrumb();
+    //breadcrumb();
 
     scrollFixedMenu();
 
