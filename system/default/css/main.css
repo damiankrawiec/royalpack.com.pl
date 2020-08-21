@@ -27,6 +27,9 @@ video {
 .logo img {
   margin-top: 9px;
 }
+.logo .carousel-caption {
+  display: none !important;
+}
 .im-movie .object {
   padding: 0;
 }
