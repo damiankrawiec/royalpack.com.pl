@@ -178,54 +178,6 @@ video {
 .company-image .carousel-caption {
   display: none !important;
 }
-.submenu {
-  padding-top: 30px;
-}
-.submenu .fa-chevron-down {
-  display: none;
-}
-.submenu .dropdown-menu {
-  border: none;
-  position: unset !important;
-  transform: unset !important;
-  will-change: unset !important;
-  top: unset !important;
-  left: unset !important;
-}
-.submenu a {
-  color: #333;
-}
-.submenu .dropdown-item {
-  padding: 7px;
-}
-.submenu .nav-item:not(:last-child) a,
-.submenu .dropdown-item:not(:last-child) {
-  border-bottom: 1px solid #eee;
-}
-.submenu i {
-  margin-top: 2px;
-  margin-right: 5px;
-  float: left;
-}
-.submenu .nav-item.dropdown > a {
-  color: #ac0413;
-  padding: 5px 0 5px;
-  border-bottom: 2px solid #ac0413;
-}
-.submenu .submenu-img > div {
-  margin-bottom: -171px;
-  margin-top: 70px;
-  z-index: 1;
-}
-.submenu .submenu-img .carousel-caption,
-.submenu .submenu-img .carousel-indicators,
-.submenu .submenu-img .carousel-control-prev,
-.submenu .submenu-img .carousel-control-next {
-  display: none !important;
-}
-.submenu .submenu-img img {
-  width: auto;
-}
 .im-breadcrumb {
   text-transform: lowercase;
   padding: 20px;

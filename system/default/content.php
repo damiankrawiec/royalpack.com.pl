@@ -29,27 +29,6 @@ $label = $object->getAllLabel();
 
             echo '</div>';
 
-            //Generate submenu for...
-            $submenuArray = array('o-nas', 'oferta', 'technologia');
-
-            echo '<div class="submenu-data im-hide">';
-
-            foreach ($submenuArray as $sa) {
-
-                echo '<div class="'.$sa.'">';
-
-                    echo '<div class="container-fluid">';
-
-                        $object->display($this->getSection($sa, 'id'), $label['submenu'], 'parent,submenu');
-
-                    echo '</div>';
-
-                echo '</div>';
-
-            }
-
-            echo '</div>';
-
         echo '</div>';
 
         if($this->checkSection($this->currentSection, 'strona-glowna', true)) {

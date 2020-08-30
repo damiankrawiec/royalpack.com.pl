@@ -5,7 +5,7 @@ echo '<ul id="top">';
 
     echo '<li class="modal-click">'.$icon['top']['clean'].' <a href="#">'.$translation['top']['clean-system'].'</a></li>';
 
-    //Form
+    //Form for clean system
 
     echo '<form action="' . $addition->getUrl() . '" method="post">';
 
