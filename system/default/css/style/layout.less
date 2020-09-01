@@ -121,7 +121,7 @@
     padding: 10px;
     border: 25px solid @white;
     > div{
-      .light-shadow();
+      .light-shadow-square();
       .round-corner(@box-round-corner);
     }
     .icon{
@@ -172,6 +172,38 @@
     font-size: 50px !important;
     color: @gold;
     margin-bottom: 10px;
+  }
+}
+.im-box-simple {
+  .light-shadow-square();
+  border: 40px solid @white;
+  .box-icon{
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid @gold;
+    i{
+      color: @gold;
+      font-size: 32px;
+    }
+  }
+  .box-name{
+    section {
+      font-size: 19px;
+    }
+  }
+  .box-link {
+    a{
+      color: @red;
+      span{
+        float: left;
+        font-size: 17px;
+        margin: 10px 5px 0;
+      }
+      i{
+        font-size: 20px;
+        margin-top: 13px;
+      }
+    }
   }
 }
 .company-image{

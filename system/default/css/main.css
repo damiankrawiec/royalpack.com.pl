@@ -117,9 +117,9 @@ video {
   border: 25px solid #fff;
 }
 .box .object > div {
-  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
-  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
-  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -174,6 +174,36 @@ video {
   font-size: 50px !important;
   color: #e0c469;
   margin-bottom: 10px;
+}
+.im-box-simple {
+  -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  border: 40px solid #fff;
+}
+.im-box-simple .box-icon {
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0c469;
+}
+.im-box-simple .box-icon i {
+  color: #e0c469;
+  font-size: 32px;
+}
+.im-box-simple .box-name section {
+  font-size: 19px;
+}
+.im-box-simple .box-link a {
+  color: #ac0413;
+}
+.im-box-simple .box-link a span {
+  float: left;
+  font-size: 17px;
+  margin: 10px 5px 0;
+}
+.im-box-simple .box-link a i {
+  font-size: 20px;
+  margin-top: 13px;
 }
 .company-image .carousel-caption {
   display: none !important;

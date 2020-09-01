@@ -26,45 +26,35 @@ function scrollFixedMenu() {
 
     $(window).scroll(function () {
 
-        if($('.submenu-data').is(':hidden')) {
+        var $scroll = $(window).scrollTop();
 
-            var $scroll = $(window).scrollTop();
-
-            if ($scroll > $position) {
-                //down
-
-                $('.im-content').css('padding-top', 0);
-
-                $menu.removeClass('fixed');
-
-            } else {
-                //up
-
-                if ($position > 100) {
-
-                    $menu.addClass('fixed');
-
-                    $('.im-content').css('padding-top', $height);
-
-                } else {
-
-                    $('.im-content').css('padding-top', 0);
-
-                    $menu.removeClass('fixed');
-
-                }
-
-            }
-
-            $position = $scroll;
-
-        }else{
+        if ($scroll > $position) {
+            //down
 
             $('.im-content').css('padding-top', 0);
 
             $menu.removeClass('fixed');
 
+        } else {
+            //up
+
+            if ($position > 100) {
+
+                $menu.addClass('fixed');
+
+                $('.im-content').css('padding-top', $height);
+
+            } else {
+
+                $('.im-content').css('padding-top', 0);
+
+                $menu.removeClass('fixed');
+
+            }
+
         }
+
+        $position = $scroll;
 
     });
 
