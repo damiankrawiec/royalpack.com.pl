@@ -67,3 +67,37 @@ function saveSort($dataTableName, $currentShow) {
     });
 
 }
+function update() {
+
+    let $displayInfo = $('#update div').children('span');
+
+    $.ajax({
+        method: "POST",
+        url: "ajax/update.php",
+        data: {
+            event: 'update'
+        }
+    }).done(function($data) {
+
+        $displayInfo.html($data);
+
+    });
+
+}
+function backup() {
+
+    let $displayInfo = $('#backup div').children('span');
+
+    $.ajax({
+        method: "POST",
+        url: "ajax/backup.php",
+        data: {
+            event: 'backup'
+        }
+    }).done(function($data) {
+
+        $displayInfo.html($data);
+
+    });
+
+}

@@ -284,6 +284,18 @@ $(function(){
 
         fileDelete();
 
+        if($('#update').length > 0) {
+
+            update();
+
+        }
+
+        if($('#backup').length > 0) {
+
+            backup();
+
+        }
+
         $('[data-toggle="tooltip"]').tooltip();
 
         //Wait until editor has loaded
