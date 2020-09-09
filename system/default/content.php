@@ -109,6 +109,8 @@ $label = $object->getAllLabel();
 
             <?php $object->display($sectionData['id'], $label['footer-logo']); ?>
 
+            <?php $object->display($sectionData['id'], $label['footer-menu']); ?>
+
         </div>
 
     </div>

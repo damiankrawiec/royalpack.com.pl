@@ -57,51 +57,68 @@
     }
   }
 }
-.navbar{
-  padding: 0;
-  margin-top: 7px;
-  ul{
-    li{
-      padding: 4px 7px 0;
-      text-align: center;
-      margin: 0 2px 0;
-      border: 1px solid @white;
-      a{
-        color: @black;
-        p {
-          color: @gray;
-          font-size: 12px;
+.im-top {
+  .navbar {
+    padding: 0;
+    margin-top: 7px;
+
+    ul {
+      li {
+        padding: 4px 7px 0;
+        text-align: center;
+        margin: 0 2px 0;
+        border: 1px solid @white;
+
+        a {
+          color: @black;
+
+          p {
+            color: @gray;
+            font-size: 12px;
+          }
         }
       }
-    }
-    li.active{
-      border-color: @gold;
-      a{
-        color: @gold;
+
+      li.active {
+        border-color: @gold;
+
+        a {
+          color: @gold;
+        }
+      }
+
+      li.active-hover {
+        border-bottom-color: @red;
+
+        a {
+          color: @red;
+        }
+      }
+
+      li:hover {
+        border-color: @gold;
       }
     }
-    li.active-hover{
-      border-bottom-color: @red;
-      a{
-        color: @red;
-      }
-    }
-    li:hover{
-      border-color: @gold;
-    }
-  }
-}
-.navbar-toggler{
-  //position: fixed;
-  //top: -60px;
-  //left: -100px;
-  margin-top: -82px;
-  border: 1px solid @dark-gray;
-  i{
-    font-size: 29px;
-    color: @dark-gray;
   }
 
+  .navbar-toggler {
+    //position: fixed;
+    //top: -60px;
+    //left: -100px;
+    margin-top: -82px;
+    border: 1px solid @dark-gray;
+
+    i {
+      font-size: 29px;
+      color: @dark-gray;
+    }
+
+  }
+}
+.footer-menu{
+  a{
+    color: @white;
+  }
 }
 .movie-text{
   z-index: 1;
@@ -175,6 +192,7 @@
   }
 }
 .im-box-simple {
+  cursor: pointer;
   .light-shadow-square();
   border: 40px solid @white;
   .box-icon{
@@ -192,18 +210,7 @@
     }
   }
   .box-link {
-    a{
-      color: @red;
-      span{
-        float: left;
-        font-size: 17px;
-        margin: 10px 5px 0;
-      }
-      i{
-        font-size: 20px;
-        margin-top: 13px;
-      }
-    }
+    display: none;
   }
 }
 .company-image{

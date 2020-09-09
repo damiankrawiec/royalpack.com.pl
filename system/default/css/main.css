@@ -57,45 +57,48 @@ video {
 .object .carousel i {
   font-size: 40px;
 }
-.navbar {
+.im-top .navbar {
   padding: 0;
   margin-top: 7px;
 }
-.navbar ul li {
+.im-top .navbar ul li {
   padding: 4px 7px 0;
   text-align: center;
   margin: 0 2px 0;
   border: 1px solid #fff;
 }
-.navbar ul li a {
+.im-top .navbar ul li a {
   color: #333;
 }
-.navbar ul li a p {
+.im-top .navbar ul li a p {
   color: #aaa;
   font-size: 12px;
 }
-.navbar ul li.active {
+.im-top .navbar ul li.active {
   border-color: #e0c469;
 }
-.navbar ul li.active a {
+.im-top .navbar ul li.active a {
   color: #e0c469;
 }
-.navbar ul li.active-hover {
+.im-top .navbar ul li.active-hover {
   border-bottom-color: #ac0413;
 }
-.navbar ul li.active-hover a {
+.im-top .navbar ul li.active-hover a {
   color: #ac0413;
 }
-.navbar ul li:hover {
+.im-top .navbar ul li:hover {
   border-color: #e0c469;
 }
-.navbar-toggler {
+.im-top .navbar-toggler {
   margin-top: -82px;
   border: 1px solid #777;
 }
-.navbar-toggler i {
+.im-top .navbar-toggler i {
   font-size: 29px;
   color: #777;
+}
+.footer-menu a {
+  color: #fff;
 }
 .movie-text {
   z-index: 1;
@@ -176,6 +179,7 @@ video {
   margin-bottom: 10px;
 }
 .im-box-simple {
+  cursor: pointer;
   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
@@ -193,17 +197,8 @@ video {
 .im-box-simple .box-name section {
   font-size: 19px;
 }
-.im-box-simple .box-link a {
-  color: #ac0413;
-}
-.im-box-simple .box-link a span {
-  float: left;
-  font-size: 17px;
-  margin: 10px 5px 0;
-}
-.im-box-simple .box-link a i {
-  font-size: 20px;
-  margin-top: 13px;
+.im-box-simple .box-link {
+  display: none;
 }
 .company-image .carousel-caption {
   display: none !important;

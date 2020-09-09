@@ -96,7 +96,7 @@ function showFile() {
 
 function buttonEvent() {
 
-    $('.show-object').click(function() {
+    $('.object').on('click', '.show-object', function() {
 
         var $this = $(this);
 
@@ -121,5 +121,33 @@ function buttonEvent() {
         });
 
     });
+
+}
+
+function linkBox() {
+
+    $('.im-box-simple').click(function() {
+
+        let $this = $(this);
+
+        if($this.find('.box-link').length) {
+
+            let $a = $this.find('.box-link').children('a');
+
+            if($a.attr('href') !== '')
+                window.location = $a.attr('href');
+
+        }
+
+    });
+
+}
+function footerMenuCenter() {
+
+    let $ul = $('.footer-menu').find('ul');
+
+    $ul.removeClass('ml-auto');
+
+    $ul.css('margin', '0 auto');
 
 }
