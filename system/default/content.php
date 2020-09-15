@@ -66,7 +66,7 @@ $label = $object->getAllLabel();
 
             echo '<div class="'.$class.'">';
 
-                echo '<div class="animated fadeInUp">';
+                echo '<div class="'.$this->setting['class-content'].'">';
 
                     $object->display($sectionData['id'], $label['prolog']);
 
@@ -78,7 +78,7 @@ $label = $object->getAllLabel();
 
             echo '<div class="'.$class.'">';
 
-                echo '<div class="animated fadeInUp">';
+                echo '<div class="'.$this->setting['class-content'].'">';
 
                     $object->display($sectionData['id'], $label['content']);
 
