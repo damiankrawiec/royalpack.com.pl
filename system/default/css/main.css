@@ -100,6 +100,15 @@ video {
 .footer-menu a {
   color: #fff;
 }
+.footer-menu .navbar-toggler {
+  display: none !important;
+}
+.footer-menu .navbar-collapse {
+  display: block !important;
+}
+.footer-menu .navbar-nav {
+  display: inline-flex;
+}
 .movie-text {
   z-index: 1;
   position: absolute;
@@ -438,6 +447,18 @@ video {
 .en-content .request-proposal,
 .de-content .request-proposal {
   display: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  color: #333 !important;
+}
+.section-content .carousel {
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 #dzial-kontroli-jakosci .content .im-box-list {
   margin-bottom: 60px;

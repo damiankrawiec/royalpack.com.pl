@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 16 Wrz 2020, 10:03
+-- Czas generowania: 16 Wrz 2020, 11:44
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -243,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `im_image` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_image`
@@ -287,7 +287,15 @@ INSERT INTO `im_image` (`image_id`, `section`, `name`, `content`, `url`, `status
 (37, 0, 'Brylant Polskiej Gospodarki 2019', NULL, 'brylant-polskiej-gospodarki-2019-42827695fb8dafc91d421109a63e41d2.jpg', 'on', NULL, '2020-09-16 09:17:28', '2020-09-16 09:17:28'),
 (38, 0, 'Efektywna firma 2019', NULL, 'efektywna-firma-2019-25f97d8ed4b9aa15bee2fcd27d73d65b.jpg', 'on', NULL, '2020-09-16 09:17:54', '2020-09-16 09:17:54'),
 (39, 0, 'Gepard Biznesu 2019', NULL, 'gepard-biznesu-2019-e028949f567491c3d6ff1a0a12ebd75a.jpg', 'on', NULL, '2020-09-16 09:18:19', '2020-09-16 09:18:19'),
-(40, 0, 'Mocna Firma - Godna Zaufania 2019', NULL, 'mocna-firma-godna-zaufania-2019-61b6e0aaa3e3faa5e96bc2583b3bb2cd.jpg', 'on', NULL, '2020-09-16 09:18:41', '2020-09-16 09:18:41');
+(40, 0, 'Mocna Firma - Godna Zaufania 2019', NULL, 'mocna-firma-godna-zaufania-2019-61b6e0aaa3e3faa5e96bc2583b3bb2cd.jpg', 'on', NULL, '2020-09-16 09:18:41', '2020-09-16 09:18:41'),
+(41, 0, 'Standard FEFCO', NULL, '141015h07_net_ikona-aa2aab329e828dc30951c76522a08a52.jpg', 'on', NULL, '2020-09-16 13:17:35', '2020-09-16 13:17:35'),
+(42, 0, 'Standard FEFCO', NULL, '180122b05_net_ikona-526e34161bfd0573d000a10711bac28f.jpg', 'on', NULL, '2020-09-16 13:17:53', '2020-09-16 13:17:53'),
+(43, 0, 'Standard FEFCO', NULL, '190722e04_net_ikona-ff2eae64f242bcf14c64a2eb86f38336.jpg', 'on', NULL, '2020-09-16 13:18:02', '2020-09-16 13:18:02'),
+(44, 0, 'Standard FEFCO', NULL, '191123d02_net_ikona-21495ef9491a5d7b81aa9b0e6160a32c.jpg', 'on', NULL, '2020-09-16 13:18:11', '2020-09-16 13:18:11'),
+(45, 0, 'Standard FEFCO', NULL, '1500947zwp_tacka_net_ikona-eb99815b4896cd77804162278ce85d34.jpg', 'on', NULL, '2020-09-16 13:18:23', '2020-09-16 13:18:23'),
+(46, 0, 'Standard FEFCO', NULL, 'po1805496v2_net_ikona-7e58b7cd7753f78892fe78b59c3d1293.jpg', 'on', NULL, '2020-09-16 13:18:32', '2020-09-16 13:18:32'),
+(47, 0, 'Standard FEFCO', NULL, 'po1901222v2_taca__net_ikona-6f2faf484d381cf179e6e94e2bc15e37.jpg', 'on', NULL, '2020-09-16 13:18:43', '2020-09-16 13:18:43'),
+(48, 0, 'Standard FEFCO', NULL, 'roya150112_net_ikona-e4e8518f2245ca822ead2db092ed3fe8.jpg', 'on', NULL, '2020-09-16 13:18:52', '2020-09-16 13:18:52');
 
 --
 -- Wyzwalacze `im_image`
@@ -324,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `im_label` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`label_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_label`
@@ -350,7 +358,8 @@ INSERT INTO `im_label` (`label_id`, `name`, `system_name`, `style`, `description
 (19, 'Plik', 'file', NULL, NULL, '2020-07-14 17:35:45', '2020-07-14 17:35:45'),
 (20, 'Flaga UE', 'eu', NULL, NULL, '2020-07-28 09:54:59', '2020-07-28 09:54:59'),
 (21, 'Zdjęcie', 'image', NULL, NULL, '2020-07-28 15:22:18', '2020-07-28 15:22:18'),
-(22, 'Menu w stopce', 'footer-menu', NULL, NULL, '2020-09-09 13:34:22', '2020-09-09 13:34:22');
+(22, 'Menu w stopce', 'footer-menu', NULL, NULL, '2020-09-09 13:34:22', '2020-09-09 13:34:22'),
+(23, 'Szczegóły sekcji', 'section-content', NULL, NULL, '2020-09-16 13:28:06', '2020-09-16 13:28:06');
 
 --
 -- Wyzwalacze `im_label`
@@ -549,7 +558,7 @@ CREATE TABLE IF NOT EXISTS `im_object` (
   PRIMARY KEY (`object_id`),
   KEY `type_id` (`type_id`),
   KEY `label_id` (`label_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_object`
@@ -661,10 +670,8 @@ INSERT INTO `im_object` (`object_id`, `type_id`, `label_id`, `section`, `section
 (110, 10, 6, 0, '', 'Sekcja opakowania', '', '<p>Dzięki kreatywności naszych konstruktor&oacute;w, grafik&oacute;w oraz nowoczesnym maszynom do produkcji opakowań zbiorczych i jednostkowych z tektury falistej, w naszej ofercie znajdą Państwo wiele unikalnych rozwiązań w zakresie opakowań z nadrukiem offsetowym oraz fleksograficznym. Realizujemy wszelkie konstrukcje oparte o katalog FEFCO i jego pochodne, oraz indywidualne projekty dopasowane do potrzeb pakowanego produktu. O ich estetykę i funkcjonalność dba wysoce zmotywowany dział R&amp;D.</p>', '', '', '', '', '', 'fal fa-grip-lines fa-3x', '', 6, 'on', 'off', '', '2020-09-15', '2020-09-15 09:47:34', '2020-09-15 10:53:55'),
 (111, 10, 6, 0, '', 'Sekcja technologia', '', '<p>Dobre rozwiązania opakowaniowe, to takie kt&oacute;re łączą cechy wysokiej funkcjonalności użytkowej oraz nienagannej estetyki. Wysoce wykwalifikowany dział rozwoju produktu jak i zautomatyzowany, nowoczesny park maszynowy, kt&oacute;ry umożliwia połączenie obu tych cech produktowych to jedne z wielu atut&oacute;w przedsiębiorstwa. ROYALPACK to jedyna firma w Europie, kt&oacute;ra posiada unikatową w skali światowej linię do produkcji tektury falistej i jednoczesnego jej laminowania z wieloma innowacyjnymi rozwiązaniami technologicznymi. Zainstalowane nowe maszyny gwarantują najwyższą jakość opakowań z tektur falistych, począwszy od fali F poprzez E, B, C, EE, EB, BB oraz BC, a nowej generacji wielkoformatowe maszyny drukujące tworzą na nich niezwykle estetyczny zadruk offsetowy lub fleksograficzny o wysokiej rozdzielczości. Finalnie opakowania realizowane przez ROYALPACK są skutecznym narzędziem marketingowym dla naszych zadowolonych klient&oacute;w.</p>', '', '', '', '', '', 'fal fa-grip-lines fa-3x', '', 6, 'on', 'off', '', '2020-09-15', '2020-09-15 09:58:44', '2020-09-15 10:06:01');
 INSERT INTO `im_object` (`object_id`, `type_id`, `label_id`, `section`, `section_name`, `system_name`, `name`, `content`, `link`, `link_name`, `email`, `form`, `attachment`, `icon`, `map`, `position`, `status`, `status_copy`, `description`, `date`, `date_create`, `date_modify`) VALUES
-(112, 10, 6, 0, '', 'Sekcja POS-Displays', '', '<p>Są powszechnie stosowane w wielu sieciach sklepowych. Stand, inaczej POS (Point of Sales) to forma ekspozycji produkt&oacute;w, umożliwiająca ich bardzo efektowną prezentację i jednocześnie promocję. Konstrukcje wystawiennicze są niezwykle pomocne zwłaszcza w fazie promocji i wdrażania nowych produkt&oacute;w.</p>\r\n<p>Poprzez swoją formę oraz grafikę znacznie bardziej przyciągają uwagę klienta od zwykłych p&oacute;łek sklepowych. Standy pozwalają na większe oddziaływanie, czy też kreowanie marki w punkcie zakupu.</p>\r\n<p>Nasza oferta obejmuje ich r&oacute;żne konstrukcje: monolityczne, modułowe, czy też wyspy produktowe.</p>', '', '', '', '', '', 'fal fa-grip-lines fa-3x', '', 6, 'on', 'off', '', '2020-09-15', '2020-09-15 10:25:06', '2020-09-15 10:28:18'),
-(113, 14, 14, 0, '', 'Sekcja POS-Displays', '<i class=\"fal fa-grip-lines\"></i> POS Displays <i class=\"fal fa-grip-lines\"></i>', '<p>Dzięki kreatywności naszych konstruktor&oacute;w, grafik&oacute;w oraz nowoczesnym maszynom do produkcji opakowań zbiorczych i jednostkowych z tektury falistej, w naszej ofercie znajdą Państwo wiele unikalnych rozwiązań w zakresie opakowań z nadrukiem offsetowym oraz fleksograficznym. Realizujemy wszelkie konstrukcje oparte o katalog FEFCO i jego pochodne, oraz indywidualne projekty dopasowane do potrzeb pakowanego produktu. O ich estetykę i funkcjonalność dba wysoce zmotywowany dział R&amp;D.</p>', '', '', '', '', '', '', '', 5, 'on', 'off', '', '2020-09-15', '2020-09-15 10:28:57', '2020-09-15 10:29:39'),
-(114, 14, 14, 0, '', 'Sekcja Standard FEFCO', '<i class=\"fal fa-grip-lines\"></i> Standard FEFCO <i class=\"fal fa-grip-lines\"></i>', '<p>Dzięki kreatywności naszych konstruktor&oacute;w, grafik&oacute;w oraz nowoczesnym maszynom do produkcji opakowań zbiorczych i jednostkowych z tektury falistej, w naszej ofercie znajdą Państwo wiele unikalnych rozwiązań w zakresie opakowań z nadrukiem offsetowym oraz fleksograficznym. Realizujemy wszelkie konstrukcje oparte o katalog FEFCO i jego pochodne, oraz indywidualne projekty dopasowane do potrzeb pakowanego produktu. O ich estetykę i funkcjonalność dba wysoce zmotywowany dział R&amp;D.</p>', '', '', '', '', '', '', '', 5, 'on', 'off', '', '2020-09-15', '2020-09-15 10:47:40', '2020-09-15 10:49:26'),
-(115, 10, 6, 0, '', 'Sekcja Standard FEFCO', '', '<p>Katalog FEFCO to zbi&oacute;r projekt&oacute;w najczęściej wykorzystywanych w celu określenia konstrukcji opakowań. Realizujemy wszystkie konstrukcje w nim zawarte jak i szereg innych.</p>', '', '', '', '', '', 'fal fa-grip-lines fa-3x', '', 6, 'on', 'off', '', '2020-09-15', '2020-09-15 10:49:57', '2020-09-15 10:50:44'),
+(112, 25, 6, 0, '', 'Sekcja POS-Displays', '', '<p>Są powszechnie stosowane w wielu sieciach sklepowych. Stand, inaczej POS (Point of Sales) to forma ekspozycji produkt&oacute;w, umożliwiająca ich bardzo efektowną prezentację i jednocześnie promocję. Konstrukcje wystawiennicze są niezwykle pomocne zwłaszcza w fazie promocji i wdrażania nowych produkt&oacute;w.</p>\r\n<p>Poprzez swoją formę oraz grafikę znacznie bardziej przyciągają uwagę klienta od zwykłych p&oacute;łek sklepowych. Standy pozwalają na większe oddziaływanie, czy też kreowanie marki w punkcie zakupu.</p>\r\n<p>Nasza oferta obejmuje ich r&oacute;żne konstrukcje: monolityczne, modułowe, czy też wyspy produktowe.</p>', '', '', '', '', '', 'fal fa-grip-lines fa-3x', '', 2, 'off', 'off', '', '2020-09-15', '2020-09-15 10:25:06', '2020-09-16 13:19:18'),
+(115, 25, 23, 0, '', 'Sekcja Standard FEFCO', '<i class=\"fal fa-grip-lines\"></i> Standard FEFCO <i class=\"fal fa-grip-lines\"></i>', '<p>Katalog FEFCO to zbi&oacute;r projekt&oacute;w najczęściej wykorzystywanych w celu określenia konstrukcji opakowań. Realizujemy wszystkie konstrukcje w nim zawarte jak i szereg innych.</p>', '', '', '', '', '', 'fal fa-grip-lines fa-3x', '', 1, 'on', 'off', '', '2020-09-15', '2020-09-15 10:49:57', '2020-09-16 13:28:37'),
 (116, 20, 6, 0, '', 'Brylanty Polskiej Gospodarki 2019', 'Brylanty Polskiej Gospodarki 2019', '<p>ROYALPACK został wyr&oacute;żniony przez Instytut Europejskiego Biznesu w XII edycji Konkursu Brylanty Polskiej Gospodarki 2019</p>', '', '', '', '', '', '', '', 1, 'on', 'off', '', '2020-09-16', '2020-09-16 09:41:24', '2020-09-16 10:19:47'),
 (117, 20, 6, 0, '', 'Gepardy Biznesu 2019', 'Gepardy Biznesu 2019', '<p>ROYALPACK otrzymał wyr&oacute;żnienie w XIV edycji Konkursu Gepardy Biznesu 2019 za dynamiczny rozw&oacute;j i wzrost wartości rynkowej przez Instytut Europejskiego Biznesu.</p>', '', '', '', '', '', '', '', 2, 'on', 'off', '', '2020-09-16', '2020-09-16 09:45:23', '2020-09-16 10:19:47'),
 (118, 20, 6, 0, '', 'Efektywna Firma 2019', 'Efektywna Firma 2019', '<p>ROYALPACK został wyr&oacute;żniony przez Instytut Europejskiego Biznesu w XII edycji Konkursu Efektywna Firma 2019</p>', '', '', '', '', '', '', '', 3, 'on', 'off', '', '2020-09-16', '2020-09-16 10:13:23', '2020-09-16 10:19:47'),
@@ -832,7 +839,7 @@ CREATE TABLE IF NOT EXISTS `im_object_image` (
   PRIMARY KEY (`object_image_id`),
   KEY `object_id` (`object_id`),
   KEY `image_id` (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_object_image`
@@ -865,7 +872,15 @@ INSERT INTO `im_object_image` (`object_image_id`, `object_id`, `image_id`, `posi
 (70, 116, 37, 1),
 (72, 117, 39, 1),
 (75, 118, 38, 1),
-(78, 119, 40, 1);
+(78, 119, 40, 1),
+(87, 115, 41, 1),
+(88, 115, 42, 2),
+(89, 115, 43, 3),
+(90, 115, 44, 4),
+(91, 115, 45, 5),
+(92, 115, 46, 6),
+(93, 115, 47, 7),
+(94, 115, 48, 8);
 
 -- --------------------------------------------------------
 
@@ -1093,7 +1108,7 @@ CREATE TABLE IF NOT EXISTS `im_section_object` (
   PRIMARY KEY (`section_object_id`),
   KEY `section_id` (`section_id`),
   KEY `object_id` (`object_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2085 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2088 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_section_object`
@@ -1483,9 +1498,6 @@ INSERT INTO `im_section_object` (`section_object_id`, `section_id`, `object_id`)
 (2038, 8, 106),
 (2043, 4, 111),
 (2048, 9, 112),
-(2052, 9, 113),
-(2055, 10, 114),
-(2059, 10, 115),
 (2060, 3, 110),
 (2061, 7, 16),
 (2063, 22, 36),
@@ -1495,7 +1507,8 @@ INSERT INTO `im_section_object` (`section_object_id`, `section_id`, `object_id`)
 (2078, 21, 118),
 (2082, 21, 119),
 (2083, 8, 94),
-(2084, 8, 97);
+(2084, 8, 97),
+(2087, 10, 115);
 
 -- --------------------------------------------------------
 
@@ -1605,7 +1618,7 @@ CREATE TABLE IF NOT EXISTS `im_translation` (
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`translation_id`),
   KEY `language_id` (`language_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=269 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=271 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_translation`
@@ -1811,8 +1824,6 @@ INSERT INTO `im_translation` (`translation_id`, `language_id`, `name`, `target_t
 (198, 2, 'Opakowania', 'im_object', 'content', 111, '<p>A good packaging solution is one that combines the features of high functionality and impeccable aesthetics. The biggest assets of our company are highly qualified product development department and automated, modern machine park that ensures both above mentioned characteristics of our products. ROYALPACK is the only company in Europe with a line for the production of corrugated cardboard and its simultaneous lamination with many innovative technological solutions, which is unique in the world. The new machines installed in our facility guarantee the highest quality of corrugated cardboard packaging, starting from the F flute, through E, B, C, EE, EB, BB and BC flute, while the new generation large-format printing machines create an extremely aesthetic offset or flexographic printing with high resolution. Ultimately, packages made by ROYALPACK are an effective marketing tool for our satisfied customers.</p>', '', '2020-09-15 09:58:44', '2020-09-15 10:00:11'),
 (201, 3, 'Opakowania', 'im_object', 'content', 112, '<p>Sie werden h&auml;ufig in vielen Shopketten verwendet. Ein Stand oder POS (Point of Sales) ist eine Form der Produktpr&auml;sentation, die eine sehr effektive Pr&auml;sentation und gleichzeitige Werbung erm&ouml;glicht. Ausstellungskonstruktionen sind besonders hilfreich, insbesondere in der Werbe- und Implementierungsphase neuer Produkte.</p>\r\n<p>Dank ihrer Form und Grafiken, ziehen sie die Aufmerksamkeit des Kunden viel mehr als gew&ouml;hnliche Ladenregale an. Die Stands erm&ouml;glichen eine gr&ouml;&szlig;ere Wirkung oder Branding am Kaufort.</p>\r\n<p>Unser Angebot umfasst ihre verschiedenen Konstruktionen: monolithische, modulare oder Produktinseln.</p>', '', '2020-09-15 10:25:06', '2020-09-15 10:27:58'),
 (202, 2, 'Opakowania', 'im_object', 'content', 112, '<p>They are commonly used in many store chains. A stand, or POS (Point of Sales), is a form of a display that allows for effective presentation of a product, and its promotion at the same time. Display structures are extremely helpful, especially in the promotion and implementation phase of new products.</p>\r\n<p>Thanks to their form and graphics, they attract the customer\'s attention much more effectively than ordinary store shelves. Stands allow for greater impact or creation of a brand at the point of purchase.</p>\r\n<p>Our offer includes various structures of stands: monolithic, modular or product islands.</p>', '', '2020-09-15 10:25:06', '2020-09-15 10:27:18'),
-(203, 3, 'Opakowania', 'im_object', 'name', 113, '<i class=\"fal fa-grip-lines\"></i> POS Displays <i class=\"fal fa-grip-lines\"></i>', '', '2020-09-15 10:28:57', '2020-09-15 10:30:27'),
-(204, 2, 'Opakowania', 'im_object', 'name', 113, '<i class=\"fal fa-grip-lines\"></i> POS Displays <i class=\"fal fa-grip-lines\"></i>', '', '2020-09-15 10:28:57', '2020-09-15 10:30:35'),
 (205, 3, 'Ekspozytory ladowe', 'im_object', 'name', 95, 'LADENGESTELL', NULL, '2020-09-15 10:33:05', '2020-09-15 10:33:05'),
 (206, 2, 'Ekspozytory ladowe', 'im_object', 'name', 95, 'COUNTER DISPLAYS', NULL, '2020-09-15 10:33:44', '2020-09-15 10:33:44'),
 (207, 2, 'Standard FEFCO', 'im_object', 'name', 93, 'FEFCO STANDARD', NULL, '2020-09-15 10:34:35', '2020-09-15 10:34:35'),
@@ -1825,8 +1836,6 @@ INSERT INTO `im_translation` (`translation_id`, `language_id`, `name`, `target_t
 (214, 2, 'Projekty innowacyjne', 'im_object', 'name', 99, 'INNOVATIVE PROJECTS', NULL, '2020-09-15 10:40:19', '2020-09-15 10:40:19'),
 (215, 2, 'Standard FEFCO', 'im_section', 'name', 10, 'FEFCO standard', '', '2020-09-15 10:45:52', '2020-09-15 10:46:09'),
 (216, 3, 'Standard FEFCO', 'im_section', 'name', 10, 'Der FEFCO-Standard', '', '2020-09-15 10:46:40', '2020-09-15 10:46:51'),
-(217, 3, 'Standard FEFCO', 'im_object', 'name', 114, '<i class=\"fal fa-grip-lines\"></i> Der FEFCO-Standard <i class=\"fal fa-grip-lines\"></i>', '', '2020-09-15 10:47:40', '2020-09-15 10:48:37'),
-(218, 2, 'Standard FEFCO', 'im_object', 'name', 114, '<i class=\"fal fa-grip-lines\"></i> FEFCO standard <i class=\"fal fa-grip-lines\"></i>', '', '2020-09-15 10:47:40', '2020-09-15 10:49:01'),
 (219, 3, 'Standard FEFCO', 'im_object', 'content', 115, '<p>Der FEFCO-Katalog ist eine Sammlung von Projekten, die am meisten zur Konstruktion der Verpackungen verwendet werden. Wir realisiert alle darin enthaltenen Konstruktionen sowie eine Reihe anderer.</p>', '', '2020-09-15 10:49:57', '2020-09-15 10:51:27'),
 (220, 2, 'Standard FEFCO', 'im_object', 'content', 115, '<p>The FEFCO catalog is a collection of projects most commonly used to determine the package construction. We implement all structures included in it, as well as a number of others.</p>', '', '2020-09-15 10:49:57', '2020-09-15 10:51:07'),
 (221, 2, 'Diamonds of the Polish Economy 2018', 'im_object', 'name', 52, 'Diamonds of the Polish Economy 2018', NULL, '2020-09-16 09:20:54', '2020-09-16 09:20:54'),
@@ -1876,7 +1885,9 @@ INSERT INTO `im_translation` (`translation_id`, `language_id`, `name`, `target_t
 (265, 2, 'Strong Trustworthy Company 2019', 'im_object', 'name', 119, 'Strong Trustworthy Company 2019', '', '2020-09-16 10:16:11', '2020-09-16 10:17:30'),
 (266, 2, 'Strong Trustworthy Company 2019', 'im_object', 'content', 119, '<p>ROYALPACK was awarded by the Institute of European Business in the 7th edition of the Strong Trustworthy Company Promotional Program 2019</p>', '', '2020-09-16 10:16:11', '2020-09-16 10:17:05'),
 (267, 3, 'Starkes vertrauenswürdiges Unternehmen 2019', 'im_object', 'content', 119, '<p>ROYALPACK wurde vom Institute of European Business in der 7. Ausgabe des Strong Trustworthy Company Promotional Program 2019 ausgezeichnet</p>', '', '2020-09-16 10:16:11', '2020-09-16 10:17:19'),
-(268, 3, 'Starkes vertrauenswürdiges Unternehmen 2019', 'im_object', 'name', 119, 'Starkes vertrauenswürdiges Unternehmen 2019', '', '2020-09-16 10:16:11', '2020-09-16 10:17:39');
+(268, 3, 'Starkes vertrauenswürdiges Unternehmen 2019', 'im_object', 'name', 119, 'Starkes vertrauenswürdiges Unternehmen 2019', '', '2020-09-16 10:16:11', '2020-09-16 10:17:39'),
+(269, 2, 'FEFCO Standard', 'im_object', 'name', 115, 'FEFCO Standard', NULL, '2020-09-16 13:05:34', '2020-09-16 13:05:34'),
+(270, 3, 'Der FEFCO-Standard', 'im_object', 'name', 115, 'Der FEFCO-Standard', NULL, '2020-09-16 13:06:50', '2020-09-16 13:06:50');
 
 --
 -- Wyzwalacze `im_translation`
@@ -1985,7 +1996,7 @@ CREATE TABLE IF NOT EXISTS `im_type` (
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_type`
@@ -2015,7 +2026,8 @@ INSERT INTO `im_type` (`type_id`, `name`, `class`, `status`, `description`, `dat
 (21, 'Flaga UE', 'col-12', 'on', '', '2020-07-28 09:55:34', '2020-07-28 09:57:00'),
 (22, 'Zapytanie ofertowe', 'col-12 request-proposal', 'on', 'Sekcja dotacje UE', '2020-07-28 12:59:01', '2020-08-19 18:02:41'),
 (23, 'Zdjęcie', '', 'on', NULL, '2020-07-28 15:22:39', '2020-07-28 15:22:39'),
-(24, 'Kontener prosty', 'col-12 col-lg-4 im-box-simple', 'on', '', '2020-09-01 19:45:41', '2020-09-01 20:01:08');
+(24, 'Kontener prosty', 'col-12 col-lg-4 im-box-simple', 'on', '', '2020-09-01 19:45:41', '2020-09-01 20:01:08'),
+(25, 'Szczegóły sekcji', 'col-12', 'on', '', '2020-09-16 12:56:10', '2020-09-16 12:56:18');
 
 --
 -- Wyzwalacze `im_type`
@@ -2057,7 +2069,7 @@ CREATE TABLE IF NOT EXISTS `im_type_property` (
   PRIMARY KEY (`type_property_id`),
   KEY `type_id` (`type_id`),
   KEY `property_id` (`property_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `im_type_property`
@@ -2104,7 +2116,10 @@ INSERT INTO `im_type_property` (`type_property_id`, `type_id`, `property_id`, `c
 (39, 23, 4, 'col-12', '', 1, 'on', '', '2020-07-28 15:22:45', '2020-07-28 15:22:51'),
 (40, 24, 12, 'col-12 box-icon', '', 1, 'on', '', '2020-09-01 19:46:12', '2020-09-01 20:03:22'),
 (41, 24, 1, 'col-12 box-name', '', 2, 'on', '', '2020-09-01 19:46:50', '2020-09-01 20:03:33'),
-(42, 24, 5, 'col-12 box-link', '', 3, 'on', '', '2020-09-01 19:47:04', '2020-09-09 08:46:23');
+(42, 24, 5, 'col-12 box-link', '', 3, 'on', '', '2020-09-01 19:47:04', '2020-09-09 08:46:23'),
+(43, 25, 4, 'col-12 col-lg-6', '', 2, 'on', '', '2020-09-16 12:56:42', '2020-09-16 12:59:18'),
+(44, 25, 2, 'col-12 col-lg-6', 'pt-5', 3, 'on', '', '2020-09-16 12:57:19', '2020-09-16 13:32:54'),
+(45, 25, 1, 'col-12 pb-4', 'text-right h5', 1, 'on', '', '2020-09-16 12:58:38', '2020-09-16 13:09:34');
 
 --
 -- Wyzwalacze `im_type_property`

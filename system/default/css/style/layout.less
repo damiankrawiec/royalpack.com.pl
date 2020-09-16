@@ -119,6 +119,15 @@
   a{
     color: @white;
   }
+  .navbar-toggler {
+    display: none !important;
+  }
+  .navbar-collapse {
+    display: block !important;
+  }
+  .navbar-nav {
+    display: inline-flex;
+  }
 }
 .movie-text{
   z-index: 1;
@@ -440,6 +449,15 @@
 .en-content, .de-content {
   .request-proposal {
       display: none;
+  }
+}
+.carousel-control-prev, .carousel-control-next {
+  color: @black !important;
+}
+.section-content {
+  .carousel {
+    .light-shadow();
+    .round-corner(@box-round-corner);
   }
 }
 #dzial-kontroli-jakosci .content {
