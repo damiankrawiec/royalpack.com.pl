@@ -175,11 +175,16 @@ class System extends Setting
 
     private function checkIsAdmin($session) {
 
+        $return = false;
         if(isset($session) and isset($session['admin']) and is_array($session['admin']) and count($session['admin']) > 0) {
 
             $this->admin = true;
 
+            $return = true;
+
         }
+
+        return $return;
 
     }
 
@@ -349,7 +354,17 @@ class System extends Setting
 
                 $this->currentLanguage($session);
 
-                $this->checkIsAdmin($session);
+                if($this->checkIsAdmin($session)) {
+
+                    if(!isset($session['path-admin'])) {
+
+                        $cmsUrl = '';
+
+                    }else $cmsUrl = $session['path-admin'];
+
+                    echo '<div style="position:fixed; left: 1px; top: 1px; width: 100%; height: 20px; z-index: 1000" class="text-danger"><a href="!cms/'.$cmsUrl.'"><i class="fal fa-search fa-flip-horizontal text-danger"></i></a></div>';
+
+                }
 
                 require_once $this->system . '/content.php';
 
