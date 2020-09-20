@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 20 Wrz 2020, 15:17
+-- Czas generowania: 20 Wrz 2020, 17:57
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -282,8 +282,8 @@ INSERT INTO `im_image` (`image_id`, `section`, `name`, `content`, `url`, `status
 (30, 0, 'Logo UE 2', NULL, 'zdjecie-ue2-970d6d2aed676d46d2e4246f7d16b5fa.jpg', 'on', NULL, '2020-07-28 12:28:08', '2020-07-28 12:28:08'),
 (33, 0, 'Nowy zakład produkcyjny ROYALPACK – Słone koło Zielonej Góry', '', 'firma-dotacja-95b9b17af21977dc25d0baa95291c328.jpg', 'on', '', '2020-07-28 15:18:51', '2020-07-28 15:19:02'),
 (34, 0, 'Siedziba firmy - dron', '', 'dron-siedziba-firmy-fbb53411a96a10ed429c85f0cda1c6c7.jpg', 'on', '', '2020-08-18 16:35:24', '2020-08-18 16:43:34'),
-(35, 0, 'Flexo', NULL, 'flexo-1ffd684b51cdeb10b59935f328c9e55d.png', 'on', NULL, '2020-09-15 12:04:00', '2020-09-15 12:04:00'),
-(36, 0, 'Offset', NULL, 'offset-f4da26dd7aab060eac644d82ff2f0f20.png', 'on', NULL, '2020-09-15 12:39:51', '2020-09-15 12:39:51'),
+(35, 0, 'Flexo', '', 'flexo-25d7125c5afdc577ed7d4af13d0a7ed2.png', 'on', '', '2020-09-15 12:04:00', '2020-09-20 19:30:25'),
+(36, 0, 'Offset', '', 'offset-674b57fa73a9b0f7e82586782b0ba71a.png', 'on', '', '2020-09-15 12:39:51', '2020-09-20 19:43:22'),
 (37, 0, 'Brylant Polskiej Gospodarki 2019', NULL, 'brylant-polskiej-gospodarki-2019-42827695fb8dafc91d421109a63e41d2.jpg', 'on', NULL, '2020-09-16 09:17:28', '2020-09-16 09:17:28'),
 (38, 0, 'Efektywna firma 2019', NULL, 'efektywna-firma-2019-25f97d8ed4b9aa15bee2fcd27d73d65b.jpg', 'on', NULL, '2020-09-16 09:17:54', '2020-09-16 09:17:54'),
 (39, 0, 'Gepard Biznesu 2019', NULL, 'gepard-biznesu-2019-e028949f567491c3d6ff1a0a12ebd75a.jpg', 'on', NULL, '2020-09-16 09:18:19', '2020-09-16 09:18:19'),
@@ -2028,7 +2028,7 @@ INSERT INTO `im_type` (`type_id`, `name`, `class`, `status`, `description`, `dat
 (23, 'Zdjęcie', '', 'on', NULL, '2020-07-28 15:22:39', '2020-07-28 15:22:39'),
 (24, 'Kontener prosty', 'col-12 col-lg-4 im-box-simple', 'on', '', '2020-09-01 19:45:41', '2020-09-01 20:01:08'),
 (25, 'Szczegóły sekcji', 'col-12', 'on', '', '2020-09-16 12:56:10', '2020-09-16 12:56:18'),
-(26, 'Kontener prosty - większy', 'col-12 col-lg-6 im-box-simple', 'on', '', '2020-09-20 17:09:54', '2020-09-20 17:16:06');
+(26, 'Kontener prosty - większy', 'col-12 col-lg-6 im-box-simple im-box-simple-image', 'on', '', '2020-09-20 17:09:54', '2020-09-20 19:21:22');
 
 --
 -- Wyzwalacze `im_type`

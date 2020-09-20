@@ -193,7 +193,6 @@ video {
   -moz-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   border: 15px solid #fff;
-  min-height: 170px;
 }
 .im-box-simple .box-icon {
   padding-bottom: 20px;
@@ -209,6 +208,15 @@ video {
 }
 .im-box-simple .box-link {
   display: none;
+}
+.im-box-simple {
+  min-height: 170px;
+}
+.im-box-simple-image {
+  margin-bottom: 150px;
+}
+.im-box-simple-image {
+  min-height: 250px;
 }
 .company-image .carousel-caption {
   display: none !important;
@@ -465,10 +473,10 @@ video {
   display: none;
 }
 #technologia .animated .objects > .row .object:nth-child(2) {
-  background: url('../public/offset-f4da26dd7aab060eac644d82ff2f0f20.png') top right no-repeat;
+  background: url('../public/offset-674b57fa73a9b0f7e82586782b0ba71a.png') top right no-repeat;
 }
 #technologia .animated .objects > .row .object:nth-child(3) {
-  background: url('../public/flexo-1ffd684b51cdeb10b59935f328c9e55d.png') top right no-repeat;
+  background: url('../public/flexo-25d7125c5afdc577ed7d4af13d0a7ed2.png') top right no-repeat;
 }
 @media (max-width: 1199px) {
   #dzial-kontroli-jakosci .content .im-box-list {
