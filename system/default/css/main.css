@@ -450,15 +450,10 @@ video {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  color: #333 !important;
+  color: #aaa !important;
 }
 .section-content .carousel {
-  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
-  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
-  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  border: 1px solid #ddd;
 }
 #dzial-kontroli-jakosci .content .im-box-list {
   margin-bottom: 60px;
