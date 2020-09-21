@@ -203,8 +203,9 @@
 .im-box-simple {
   cursor: pointer;
   .light-shadow-square();
-  border: 15px solid @white;
+  border: 1px solid @white;
   .box-icon{
+    margin-top:15px;
     padding-bottom: 20px;
     margin-bottom: 15px;
     border-bottom: 1px solid @gold;
@@ -226,11 +227,14 @@
   min-height: 170px;
 }
 .im-box-simple-image {
-  margin-bottom: 150px;
-}
-.im-box-simple-image {
+  margin-top: 20px;
+  margin-bottom: 100px;
   min-height: 250px;
+  .box-name {
+    margin-top: 10px;
+  }
 }
+
 .company-image{
   .carousel-caption{
     display: none !important;
@@ -459,12 +463,13 @@
       display: none;
   }
 }
-.carousel-control-prev, .carousel-control-next {
-  color: @gray !important;
-}
 .section-content {
-  .carousel {
-    border: 1px solid @light-gray;
+  .carousel-control-prev, .carousel-control-next {
+    i{
+      color: @gray !important;
+      font-size: 55px !important;
+      opacity: 0.4;
+    }
   }
 }
 #dzial-kontroli-jakosci .content {
