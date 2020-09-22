@@ -463,7 +463,7 @@
       display: none;
   }
 }
-.section-content {
+.content, .section-content {
   .carousel-control-prev, .carousel-control-next {
     i{
       color: @gray !important;
@@ -511,16 +511,40 @@
     }
   }
 }
-#rd {
+#rd, #park-maszynowy {
   .section-content {
     img {
-      float: left;
-      width: 150px;
+      width: 250px;
+      .light-shadow();
+      .round-corner(@box-round-corner);
     }
-    .clearfix {
+    li {
       span {
         display: none;
       }
+    }
+  }
+}
+#park-maszynowy {
+  img {
+    margin-top: 20px;
+  }
+  .list-group-item {
+    border: none;
+    border-bottom: 1px solid @light-gray;
+    margin-top: 5px;
+  }
+}
+#innowacje {
+  .section-content {
+    img {
+      width: 250px;
+      margin: 24px 0 5px 20px;
+      .light-shadow();
+      .round-corner(@box-round-corner);
+    }
+    span {
+      display: none;
     }
   }
 }

@@ -459,14 +459,18 @@ video {
 .de-content .request-proposal {
   display: none;
 }
+.content .carousel-control-prev i,
 .section-content .carousel-control-prev i,
+.content .carousel-control-next i,
 .section-content .carousel-control-next i {
   color: #aaa !important;
   opacity: 0.4;
 }
+.content .carousel-control-prev i,
 .section-content .carousel-control-prev i {
   margin-left: -40px;
 }
+.content .carousel-control-next i,
 .section-content .carousel-control-next i {
   margin-right: -40px;
 }
@@ -485,11 +489,39 @@ video {
 #technologia .animated .objects > .row .object:nth-child(3) {
   background: url('../public/flexo-25d7125c5afdc577ed7d4af13d0a7ed2.png') top right no-repeat;
 }
-#rd .section-content img {
-  float: left;
-  width: 150px;
+#rd .section-content img,
+#park-maszynowy .section-content img {
+  width: 250px;
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
-#rd .section-content .clearfix span {
+#rd .section-content li span,
+#park-maszynowy .section-content li span {
+  display: none;
+}
+#park-maszynowy img {
+  margin-top: 20px;
+}
+#park-maszynowy .list-group-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-top: 5px;
+}
+#innowacje .section-content img {
+  width: 250px;
+  margin: 24px 0 5px 20px;
+  -webkit-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 9px 32px -4px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+#innowacje .section-content span {
   display: none;
 }
 @media (max-width: 1199px) {
@@ -522,6 +554,13 @@ video {
   .img-center img {
     width: 100%;
     margin: 0;
+  }
+  #rd img,
+  #park-maszynowy img,
+  #innowacje img {
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
   }
   #strona-glowna .eu {
     top: unset;
