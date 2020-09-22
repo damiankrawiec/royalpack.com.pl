@@ -462,8 +462,13 @@ video {
 .section-content .carousel-control-prev i,
 .section-content .carousel-control-next i {
   color: #aaa !important;
-  font-size: 55px !important;
   opacity: 0.4;
+}
+.section-content .carousel-control-prev i {
+  margin-left: -40px;
+}
+.section-content .carousel-control-next i {
+  margin-right: -40px;
 }
 #dzial-kontroli-jakosci .content .im-box-list {
   margin-bottom: 60px;
@@ -479,6 +484,13 @@ video {
 }
 #technologia .animated .objects > .row .object:nth-child(3) {
   background: url('../public/flexo-25d7125c5afdc577ed7d4af13d0a7ed2.png') top right no-repeat;
+}
+#rd .section-content img {
+  float: left;
+  width: 150px;
+}
+#rd .section-content .clearfix span {
+  display: none;
 }
 @media (max-width: 1199px) {
   #dzial-kontroli-jakosci .content .im-box-list {
