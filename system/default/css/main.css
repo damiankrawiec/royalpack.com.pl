@@ -503,13 +503,24 @@ video {
 #park-maszynowy .section-content li span {
   display: none;
 }
-#park-maszynowy img {
-  margin-top: 20px;
+#park-maszynowy .im-list-group > li ul li {
+  line-height: 30px;
 }
-#park-maszynowy .list-group-item {
-  border: none;
-  border-bottom: 1px solid #ddd;
-  margin-top: 5px;
+#park-maszynowy .im-list-group > li ul li:first-child {
+  margin-top: 0;
+  list-style-type: none;
+  float: right;
+  padding-left: 30px;
+}
+#rd .im-list-group li:nth-child(even) {
+  float: right;
+  list-style-type: none;
+}
+#rd .im-list-group li:nth-child(even) img {
+  margin-top: -20px;
+}
+#rd .im-list-group li:nth-child(odd) {
+  clear: both;
 }
 #innowacje .section-content img {
   width: 250px;

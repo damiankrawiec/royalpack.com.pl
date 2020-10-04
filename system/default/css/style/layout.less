@@ -526,13 +526,34 @@
   }
 }
 #park-maszynowy {
-  img {
-    margin-top: 20px;
+  .im-list-group {
+    > li {
+      ul {
+        li {
+          line-height: 30px;
+        }
+        li:first-child {
+          margin-top: 0;
+          list-style-type: none;
+          float: right;
+          padding-left: 30px;
+        }
+      }
+    }
   }
-  .list-group-item {
-    border: none;
-    border-bottom: 1px solid @light-gray;
-    margin-top: 5px;
+}
+#rd {
+  .im-list-group {
+    li:nth-child(even) {
+      float: right;
+      list-style-type: none;
+      img {
+        margin-top: -20px;
+      }
+    }
+    li:nth-child(odd) {
+      clear: both;
+    }
   }
 }
 #innowacje {
