@@ -114,14 +114,13 @@ video {
   position: absolute;
   color: #fff;
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.9;
   margin-top: 10%;
 }
 .movie-text span {
   padding: 40px;
-  text-shadow: 1px 1px 3px #333;
-  background: #333;
-  border: 1px solid #fff;
+  text-shadow: 2px 2px 3px #333;
+  font-weight: bold;
 }
 .box {
   margin: 50px 0 50px;
@@ -485,10 +484,10 @@ video {
 #ogolne-warunki-handlowe .file .list-group-item {
   display: none;
 }
-#technologia .animated .objects > .row .object:nth-child(2) {
+#technologia .class-content .objects > .row .object:nth-child(2) {
   background: url('../public/offset-674b57fa73a9b0f7e82586782b0ba71a.png') top right no-repeat;
 }
-#technologia .animated .objects > .row .object:nth-child(3) {
+#technologia .class-content .objects > .row .object:nth-child(3) {
   background: url('../public/flexo-25d7125c5afdc577ed7d4af13d0a7ed2.png') top right no-repeat;
 }
 #rd .section-content img,
