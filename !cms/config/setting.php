@@ -1,7 +1,7 @@
 <?php
 //System name in all system structure
 $s_systemName = 'IM.CMS';
-$s_permittedImage = 'jpg,jpeg,png,gif';
+$s_permittedImage = 'jpg,jpeg,png,gif,svg';
 $s_permittedMovie = 'mp4';
 $s_previewImage = '120px';
 $s_previewImageBig = '220px';
@@ -143,7 +143,7 @@ $s_eventDefinition = array(
         'im_setting' => array(
             'name' => array('name' => $tableDefinitionEvent['im_setting']['name'], 'type' => 'text', 'require' => 'validation :text', 'table' => 'im_setting', 'size' => 128),
             'system_name' => array('name' => $tableDefinitionEvent['im_setting']['system_name'], 'type' => 'text', 'require' => 'validation :text', 'table' => 'im_setting', 'size' => 128),
-            'content' => array('name' => $tableDefinitionEvent['im_setting']['content'], 'type' => 'textarea', 'require' => 'validation :source', 'table' => 'im_setting'),
+            'content' => array('name' => $tableDefinitionEvent['im_setting']['content'], 'type' => 'textarea', 'table' => 'im_setting'),
             'description' => array('name' => $tableDefinitionEvent['im_setting']['description'], 'type' => 'textarea', 'table' => 'im_setting')
         ),
         'im_translation_system' => array(
@@ -169,6 +169,7 @@ $s_eventDefinition = array(
             'label_id' => array('name' => $tableDefinitionEvent['im_label_section']['label'], 'type' => 'select:im_label', 'require' => 'validation :select', 'table' => 'im_label_section'),
             'section' => array('name' => $tableDefinitionEvent['im_label_section']['name_event'], 'type' => 'select:im_section', 'table' => 'im_label_section'),
             'class' => array('name' => $tableDefinitionEvent['im_label_section']['class'], 'type' => 'text', 'require' => 'validation :text', 'table' => 'im_label_section', 'size' => 256),
+            'class_row' => array('name' => $tableDefinitionEvent['im_label_section']['class_row'], 'type' => 'text', 'table' => 'im_label_section', 'size' => 256),
             'description' => array('name' => $tableDefinitionEvent['im_label_section']['description'], 'type' => 'textarea', 'table' => 'im_label_section')
         ),
         'im_form' => array(
@@ -246,7 +247,8 @@ $s_eventDefinition = array(
         'im_label_section' => array(
             'label_id' => array('name' => $tableDefinitionEvent['im_label_section']['label'], 'type' => 'select:im_label', 'require' => 'validation :select'),
             'section' => array('name' => $tableDefinitionEvent['im_label_section']['name_event'], 'type' => 'select:im_section'),
-            'class' => array('name' => $tableDefinitionEvent['im_label_section']['class'], 'type' => 'text', 'require' => 'validation :text', 'size' => 256)
+            'class' => array('name' => $tableDefinitionEvent['im_label_section']['class'], 'type' => 'text', 'require' => 'validation :text', 'size' => 256),
+            'class_row' => array('name' => $tableDefinitionEvent['im_label_section']['class_row'], 'type' => 'text', 'table' => 'im_label_section', 'size' => 256)
         )
     )
 );

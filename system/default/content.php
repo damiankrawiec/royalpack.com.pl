@@ -19,6 +19,8 @@ $label = $object->getAllLabel();
 
         $class = ($sectionData['class'] === '' ? 'container' : $sectionData['class']);
 
+        $classContent = ($this->setting['class-content'] != '' ? ' class="'.$this->setting['class-content'].'"' : '');
+
         echo '<div class="im-top">';
 
             echo '<div class="'.$class.'">';
@@ -66,7 +68,7 @@ $label = $object->getAllLabel();
 
             echo '<div class="'.$class.'">';
 
-                echo '<div class="'.$this->setting['class-content'].'">';
+                echo '<div'.$classContent.'>';
 
                     $object->display($sectionData['id'], $label['prolog']);
 
@@ -78,7 +80,7 @@ $label = $object->getAllLabel();
 
             echo '<div class="'.$class.'">';
 
-                echo '<div class="'.$this->setting['class-content'].'">';
+                echo '<div'.$classContent.'>';
 
                     $object->display($sectionData['id'], $label['content']);
 
