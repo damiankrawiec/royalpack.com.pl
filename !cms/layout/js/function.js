@@ -701,3 +701,45 @@ function iconListener($iconArray) {
     });
 
 }
+
+function fileCheckbox($file = false) {
+
+    if($file) {
+
+        $file.change(function() {
+
+            $file.next().show();
+
+        });
+
+    }
+
+}
+
+function copyUrl() {
+
+    $('.copy-url').click(function() {
+
+        let $this = $(this);
+
+        let $temp = $('<input>');
+
+        $('body').append($temp);
+
+        $temp.val($this.attr('title')).select();
+
+        document.execCommand('copy');
+
+        $temp.remove();
+
+        $this.addClass('text-info');
+
+        setTimeout(function() {
+
+            $this.removeClass('text-info');
+
+        }, 500);
+
+    });
+
+}
