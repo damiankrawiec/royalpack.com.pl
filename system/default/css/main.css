@@ -222,6 +222,13 @@ video {
 .im-box-simple-image .box-name {
   margin-top: 10px;
 }
+.company-image {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+}
 .company-image .carousel-caption {
   display: none !important;
 }
@@ -256,7 +263,7 @@ video {
   min-height: 300px;
   color: #fff;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 70px;
 }
 .im-footer section {
   padding: 10px;
@@ -274,6 +281,9 @@ video {
 }
 .im-footer .carousel-caption {
   display: none !important;
+}
+.im-footer .container-fluid:last-child {
+  padding: 0;
 }
 .translation p {
   line-height: 34px;
@@ -535,6 +545,10 @@ video {
 }
 #innowacje .section-content span {
   display: none;
+}
+#historia-firmy .class-content img {
+  height: 200px;
+  width: auto;
 }
 @media (max-width: 1199px) {
   #dzial-kontroli-jakosci .content .im-box-list {
