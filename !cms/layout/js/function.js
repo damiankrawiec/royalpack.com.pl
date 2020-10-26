@@ -115,7 +115,7 @@ function modalInit($this){
                 let $htmlSelect = $html.select;
                 let $htmlSelectCount = $htmlSelect.length;
 
-                $htmlData = '<select class="form-control"><option value="0">' + $('#select-value').val() + '</option>';
+                $htmlData = '<select class="form-control"><option value="0">' + $modalData.header + '</option>';
 
                 let $i;
                 for($i = 0; $i < $htmlSelectCount; $i++) {
@@ -132,6 +132,8 @@ function modalInit($this){
 
             if($htmlData !== '')
                 $('#modal .modal-body').append($htmlData);
+
+            $('select.form-control').not('.form-control-sm').chosen();
 
         }
 

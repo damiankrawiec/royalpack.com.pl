@@ -117,6 +117,15 @@ if($g_var1 != '') {
         }
         if($displayCount == 'one') {
 
+            if($g_var4 != '') {
+
+                $cmsBack = $g_var4;
+                require_once 'php/script/cms-back.php';
+
+            }
+
+            require_once 'php/script/section-move.php';
+
             $eventData = array(
                 'field' => $s_eventDefinition['edit'][$table],
                 'record' => $record,
