@@ -47,6 +47,9 @@ echo '<div class="container-fluid" id="content-top">';
 
     echo '</div>';
 
+//History of urls
+require_once 'content/box/breadcrumb.php';
+
     echo '<div class="row bg-dark">';
 
     echo '<div class="col-12 col-lg-10">';
