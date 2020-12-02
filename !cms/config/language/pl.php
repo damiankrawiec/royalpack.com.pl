@@ -5,7 +5,7 @@ $translation = array(
     'login' => array('singular' => 'Logowanie', 'imperatives' => 'Zaloguj', 'end' => 'Wyloguj', 'logged' => 'Zalogowany'),
     'email' => array('singular' => 'E-mail', 'imperatives' => 'Podaj adres e-mail', 'long' => 'Adres e-mail'),
     'password' => array('singular' => 'Hasło', 'imperatives' => 'Wprowadź hasło'),
-    'system' => array('current' => 'Bieżący system'),
+    'system' => array('current' => 'Bieżący system', 'name' => 'IM.CMS'),
     'modal' => array(
         'title' => 'Informacja',
         'not-save' => 'Ta operacja spowoduje utratę niezapisanych danych',
@@ -35,6 +35,8 @@ $translation = array(
         'one' => array('type' => 'Typ', 'label' => 'Etykieta'),
         'leave-edit' => 'Opuść tryb edycji',
         'update' => 'Uaktualnij',
+        'update-prev' => 'Uaktualnij i edytuj poprzedni',
+        'update-next' => 'Uaktualnij i edytuj następny',
         'save-back' => 'Zapisz i wróć do listy',
         'add-stay' => 'Dodaj i pozostań',
         'status' => 'Status',
@@ -144,7 +146,8 @@ $translation = array(
     'copy' => array(
         'fix' => 'Kopiuj przypisania do sekcji i kategorii',
         'outer-data' => 'Kopiuj dane zawnętrzne (obrazy, pliki, źródła)',
-        'translation' => 'Kopiuj wszystkie tłumaczenia (dla każdego języka)'
+        'translation' => 'Kopiuj wszystkie tłumaczenia (dla każdego języka)',
+        'property' => 'Kopiuj wszystkie przypisane właściwości'
     ),
     'validation' => array(
         'wrong-file' => 'Plik niepoprawny',

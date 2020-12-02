@@ -1,5 +1,7 @@
 $(function(){
 
+    showContent('fadeIn');
+
     currentSystem(3000);
 
     $('.submit').click(function(){
@@ -13,9 +15,19 @@ $(function(){
         if($this.hasClass('save-back'))
             $($targetForm).find('input[name="save_back"]').prop('disabled', false);
 
+        if($this.hasClass('edit-prev'))
+            $($targetForm).find('input[name="edit_prev"]').prop('disabled', false);
+
+        if($this.hasClass('edit-next'))
+            $($targetForm).find('input[name="edit_next"]').prop('disabled', false);
+
         if($this.attr('class').indexOf('validation-run') > -1) {
 
             if(validation($targetForm)){
+
+                $('.animated-icon').show();
+
+                $('.animated-body').hide();
 
                 if($this.attr('class').indexOf('collection-run') > -1)
                     collection();
@@ -280,7 +292,7 @@ $(function(){
 
         currentShow();
 
-        checkSubmenuIsEmpty()
+        checkSubmenuIsEmpty();
 
         $('select.form-control').chosen();
 
@@ -289,6 +301,12 @@ $(function(){
         fileDelete();
 
         editFix();
+
+        //insert visible record (after edit click) ids to navigation in edit view
+        editOne();
+
+        if($('#auto-submit').length)
+            $('#auto-submit').submit();
 
         if($('.copy-url').length > 0)
             copyUrl();
