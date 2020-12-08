@@ -441,7 +441,7 @@ video {
 }
 .language {
   position: fixed;
-  top: 29px;
+  top: 12px;
   right: -1px;
   z-index: 3;
 }
@@ -468,7 +468,8 @@ video {
   display: none !important;
 }
 .en-content .request-proposal,
-.de-content .request-proposal {
+.de-content .request-proposal,
+.fr-content .request-proposal {
   display: none;
 }
 .content .carousel-control-prev i,
