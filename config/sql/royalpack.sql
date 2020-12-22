@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Czas generowania: 22 Gru 2020, 17:29
+-- Czas generowania: 22 Gru 2020, 19:35
 -- Wersja serwera: 5.7.26
 -- Wersja PHP: 7.3.5
 
@@ -468,6 +468,7 @@ CREATE TABLE IF NOT EXISTS `im_label_section` (
   `section` int(11) NOT NULL,
   `class` varchar(256) COLLATE utf8_polish_ci DEFAULT '',
   `class_row` varchar(256) COLLATE utf8_polish_ci NOT NULL DEFAULT '',
+  `class_row_second` varchar(256) COLLATE utf8_polish_ci NOT NULL DEFAULT '',
   `description` text COLLATE utf8_polish_ci,
   `date_create` datetime DEFAULT NULL,
   `date_modify` datetime DEFAULT NULL,
@@ -479,9 +480,9 @@ CREATE TABLE IF NOT EXISTS `im_label_section` (
 -- Zrzut danych tabeli `im_label_section`
 --
 
-INSERT INTO `im_label_section` (`label_section_id`, `label_id`, `section`, `class`, `class_row`, `description`, `date_create`, `date_modify`) VALUES
-(1, 1, 0, 'col-8 col-md-6 col-lg-5 col-xl-4 offset-2 offset-md-3 offset-lg-0', '', '', '2020-06-10 11:32:13', '2020-06-24 14:44:19'),
-(2, 2, 0, 'col-12 col-lg-7 col-xl-8', '', '', '2020-06-10 11:32:28', '2020-06-24 14:35:14');
+INSERT INTO `im_label_section` (`label_section_id`, `label_id`, `section`, `class`, `class_row`, `class_row_second`, `description`, `date_create`, `date_modify`) VALUES
+(1, 1, 0, 'col-8 col-md-6 col-lg-5 col-xl-4 offset-2 offset-md-3 offset-lg-0', '', '', '', '2020-06-10 11:32:13', '2020-06-24 14:44:19'),
+(2, 2, 0, 'col-12 col-lg-7 col-xl-8', '', '', '', '2020-06-10 11:32:28', '2020-06-24 14:35:14');
 
 --
 -- Wyzwalacze `im_label_section`
