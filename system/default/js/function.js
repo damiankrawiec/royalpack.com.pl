@@ -84,6 +84,9 @@ function showFile() {
         if($('#language-en').length)
             $showFile = 'im_file-name-5';
 
+        if($('#language-fr').length)
+            $showFile = 'im_file-name-86';
+
         if($showFile !== '') {
 
             $('.' + $showFile).parents('.list-group-item').css('display', 'block');

@@ -86,6 +86,8 @@ $label = $object->getAllLabel();
 
                     $object->display($sectionData['id'], $label['section-content']);
 
+                    $object->display($sectionData['id'], $label['content-bottom']);
+
                     $object->display($sectionData['id'], $label['file']);
 
                     $object->display($sectionData['id'], $label['image']);
